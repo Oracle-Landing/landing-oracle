@@ -1,0 +1,2 @@
+# Ignore origin symlinks (source lives in ghq)
+ψ/learn/**/origin
