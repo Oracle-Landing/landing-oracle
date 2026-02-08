@@ -46,7 +46,6 @@
 ### 2. Wrangler Config (100% consistent)
 ```toml
 compatibility_date = "2025-06-01"
-compatibility_flags = ["nodejs_compat"]
 account_id = "a5eabdc2b11aae9bd5af46bd6a88179e"
 workers_dev = true
 routes = [
@@ -55,6 +54,10 @@ routes = [
 [assets]
 directory = "./dist"
 ```
+
+> **Note**: `nodejs_compat` was removed from all 4 pages on 2026-02-08.
+> None of the pages use Node.js APIs — Arthur/Phukhao use Web Crypto (crypto.subtle),
+> Maeon Craft/Thong Pradit are purely static. No polyfill needed.
 
 ### 3. Layout Pattern (100% consistent)
 - Base layout wrapping all pages
