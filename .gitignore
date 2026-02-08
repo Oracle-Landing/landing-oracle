@@ -1,2 +1,16 @@
 # Ignore origin symlinks (source lives in ghq)
 ψ/learn/**/origin
+
+# Astro
+dist/
+.astro/
+
+# Dependencies
+node_modules/
+
+# Cloudflare
+.wrangler/
+
+# Environment
+.env
+.env.*

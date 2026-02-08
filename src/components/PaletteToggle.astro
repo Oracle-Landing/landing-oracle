@@ -1,0 +1,73 @@
+---
+// Client-side only — cycles palettes, with auto-rotate toggle
+---
+
+<div class="flex items-center gap-1">
+  <!-- Rotate toggle -->
+  <button
+    id="rotate-toggle"
+    class="flex items-center justify-center w-8 h-8 rounded-full text-sm glass hover:border-[var(--theme-primary)] transition-all cursor-pointer"
+    aria-label="Toggle auto-rotate palettes"
+    title="Auto-rotate"
+  >
+    <span id="rotate-icon" class="text-sm">⟳</span>
+  </button>
+
+  <!-- Manual palette cycle -->
+  <button
+    id="palette-toggle"
+    class="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm glass hover:border-[var(--theme-primary)] transition-all cursor-pointer"
+    aria-label="Switch color palette"
+  >
+    <span id="palette-icon" class="text-base" aria-hidden="true">◇</span>
+    <span id="palette-label" class="hidden sm:inline text-[var(--theme-text-muted)]">Clarity</span>
+  </button>
+</div>
+
+<style>
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .rotating {
+    animation: spin-slow 3s linear infinite;
+    display: inline-block;
+  }
+</style>
+
+<script>
+  import { cyclePalette, toggleRotation, $palette, $rotating } from "../stores/theme";
+
+  const icons: Record<string, string> = { clarity: "◇", royal: "♛", nature: "◈" };
+  const labels: Record<string, string> = { clarity: "Clarity", royal: "Royal", nature: "Nature" };
+
+  const btn = document.getElementById("palette-toggle")!;
+  const iconEl = document.getElementById("palette-icon")!;
+  const labelEl = document.getElementById("palette-label")!;
+  const rotateBtn = document.getElementById("rotate-toggle")!;
+  const rotateIcon = document.getElementById("rotate-icon")!;
+
+  function updatePalette(p: string) {
+    iconEl.textContent = icons[p] ?? "◇";
+    labelEl.textContent = labels[p] ?? "Clarity";
+  }
+
+  function updateRotate(on: boolean) {
+    if (on) {
+      rotateIcon.classList.add("rotating");
+      rotateBtn.style.opacity = "1";
+    } else {
+      rotateIcon.classList.remove("rotating");
+      rotateBtn.style.opacity = "0.5";
+    }
+  }
+
+  updatePalette($palette.get());
+  updateRotate($rotating.get());
+
+  $palette.subscribe(updatePalette);
+  $rotating.subscribe(updateRotate);
+
+  btn.addEventListener("click", cyclePalette);
+  rotateBtn.addEventListener("click", toggleRotation);
+</script>

@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+/* ─── Palette: Clarity (default) ─── */
+html[data-palette="clarity"],
+html:not([data-palette]) {
+  --theme-bg: #0f172a;
+  --theme-surface: rgba(15, 23, 42, 0.7);
+  --theme-border: rgba(148, 163, 184, 0.12);
+  --theme-text: #e2e8f0;
+  --theme-text-muted: #94a3b8;
+  --theme-primary: #818cf8;
+  --theme-primary-rgb: 129, 140, 248;
+  --theme-secondary: #c0c7d6;
+  --theme-accent: #6366f1;
+  --theme-gradient-from: #818cf8;
+  --theme-gradient-to: #c4b5fd;
+  --theme-glow: rgba(99, 102, 241, 0.3);
+  --theme-icon: "◇";
+  --theme-label: "Clarity";
+}
+
+/* ─── Palette: Royal ─── */
+html[data-palette="royal"] {
+  --theme-bg: #0c0a1a;
+  --theme-surface: rgba(12, 10, 26, 0.7);
+  --theme-border: rgba(245, 158, 11, 0.15);
+  --theme-text: #fef3c7;
+  --theme-text-muted: #d4a03c;
+  --theme-primary: #f59e0b;
+  --theme-primary-rgb: 245, 158, 11;
+  --theme-secondary: #8b5cf6;
+  --theme-accent: #d97706;
+  --theme-gradient-from: #f59e0b;
+  --theme-gradient-to: #8b5cf6;
+  --theme-glow: rgba(245, 158, 11, 0.3);
+  --theme-icon: "♛";
+  --theme-label: "Royal";
+}
+
+/* ─── Palette: Nature ─── */
+html[data-palette="nature"] {
+  --theme-bg: #0a0f07;
+  --theme-surface: rgba(10, 15, 7, 0.7);
+  --theme-border: rgba(45, 90, 39, 0.2);
+  --theme-text: #d1e7c8;
+  --theme-text-muted: #7a9e6e;
+  --theme-primary: #4ade80;
+  --theme-primary-rgb: 74, 222, 128;
+  --theme-secondary: #d4a03c;
+  --theme-accent: #2d5a27;
+  --theme-gradient-from: #4ade80;
+  --theme-gradient-to: #d4a03c;
+  --theme-glow: rgba(45, 90, 39, 0.4);
+  --theme-icon: "◈";
+  --theme-label: "Nature";
+}
+
+/* ─── Base ─── */
+body {
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
+  font-family: "Inter", "Sarabun", system-ui, sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ─── Glass ─── */
+.glass {
+  background: var(--theme-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--theme-border);
+}
+
+.glass-card {
+  background: var(--theme-surface);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--theme-border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.3);
+  transform: translateY(-2px);
+}
+
+/* ─── Gradient text ─── */
+.gradient-text {
+  background: linear-gradient(135deg, var(--theme-gradient-from), var(--theme-gradient-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Scroll reveal ─── */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Oracle dot ─── */
+.oracle-dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+}
+
+.oracle-dot.lit {
+  box-shadow: 0 0 12px 3px var(--dot-color, var(--theme-primary));
+}
+
+.oracle-dot.dim {
+  background: rgba(var(--theme-primary-rgb), 0.25);
+  border: 1px solid rgba(var(--theme-primary-rgb), 0.1);
+}
+
+/* ─── Animations ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal.animate-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-float,
+  .animate-pulse-glow {
+    animation: none;
+  }
+  .glass-card:hover {
+    transform: none;
+  }
+}
+
+/* ─── Section borders ─── */
+.section-border {
+  border-top: 1px solid var(--theme-border);
+}
