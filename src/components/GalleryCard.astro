@@ -1,0 +1,50 @@
+---
+interface Props {
+  oracle: {
+    name: string;
+    number?: string;
+    domain?: string;
+    primary: string;
+    secondary: string;
+    background: string;
+    screenshot?: string;
+    status: "live" | "known";
+  };
+}
+
+const { oracle } = Astro.props;
+---
+
+<a
+  href={`https://${oracle.domain}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="gallery-card group relative rounded-2xl overflow-hidden block"
+  data-status="live"
+>
+  <!-- Screenshot -->
+  <div class="aspect-[16/10] relative" style={`background-color: ${oracle.background}`}>
+    <img
+      src={oracle.screenshot}
+      alt={`${oracle.name} landing page`}
+      loading="lazy"
+      decoding="async"
+      class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+    />
+  </div>
+
+  <!-- Hover overlay — macOS translucent -->
+  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md bg-black/10 saturate-[2]"></div>
+
+  <!-- Hover content — centered -->
+  <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+    <p class="text-lg font-semibold mb-1 text-white drop-shadow-md">{oracle.name}</p>
+    <p class="text-xs font-mono text-white/70 drop-shadow-sm">{oracle.domain}</p>
+  </div>
+
+  <!-- LIVE badge — always visible -->
+  <span class="absolute top-3 right-3 flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full bg-black/40 text-emerald-400 backdrop-blur-sm">
+    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-glow"></span>
+    LIVE
+  </span>
+</a>

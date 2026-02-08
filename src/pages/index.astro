@@ -1,57 +1,17 @@
 ---
 import Base from "../layouts/Base.astro";
 import Nav from "../components/Nav.astro";
-import OracleCard from "../components/OracleCard.astro";
+import GalleryCard from "../components/GalleryCard.astro";
+import PlaceholderCard from "../components/PlaceholderCard.astro";
+import FilterToggle from "../components/FilterToggle.astro";
+import { getCollection } from "astro:content";
 
-const oracles = [
-  {
-    name: "Arthur",
-    number: "1",
-    domain: "arthur.buildwithoracle.com",
-    primary: "#f59e0b",
-    secondary: "#8b5cf6",
-    background: "#0f172a",
-    stack: ["Astro 5", "React", "SIWE", "Nanostores"],
-    screenshot: "/screenshots/arthur.png",
-    live: true,
-  },
-  {
-    name: "Phukhao",
-    number: "20",
-    domain: "phukhao.buildwithoracle.com",
-    primary: "#00fff2",
-    secondary: "#bf00ff",
-    background: "#0a0a0f",
-    stack: ["Astro 5", "React", "SIWE", "TTS"],
-    screenshot: "/screenshots/phukhao.png",
-    live: true,
-  },
-  {
-    name: "Maeon Craft",
-    number: undefined,
-    domain: "maeoncraft.buildwithoracle.com",
-    primary: "#2d5a27",
-    secondary: "#d4a03c",
-    background: "#0a0a07",
-    stack: ["Astro 5", "Nanostores", "Bilingual"],
-    screenshot: "/screenshots/maeoncraft.png",
-    live: true,
-  },
-  {
-    name: "Thong Pradit",
-    number: undefined,
-    domain: "thongpraditxcatlab.buildwithoracle.com",
-    primary: "#F59E0B",
-    secondary: "#2563EB",
-    background: "#000000",
-    stack: ["Astro 5", "Canvas", "Physics Viz"],
-    screenshot: "/screenshots/thongpradit.png",
-    live: true,
-  },
-];
+const allOracles = await getCollection("oracles");
+const liveOracles = allOracles.filter((o) => o.data.status === "live");
+const knownOracles = allOracles.filter((o) => o.data.status === "known");
 
 const TOTAL_ORACLES = 76;
-const LIVE_COUNT = oracles.filter((o) => o.live).length;
+const LIVE_COUNT = liveOracles.length;
 const DIM_COUNT = TOTAL_ORACLES - LIVE_COUNT;
 const PERCENT = Math.round((LIVE_COUNT / TOTAL_ORACLES) * 100);
 
@@ -111,43 +71,27 @@ const steps = [
   <main>
     <!-- ═══ ORACLE GALLERY ═══ -->
     <section id="registry" class="pt-24 pb-14 sm:pb-20 px-4">
-      <div class="max-w-5xl mx-auto">
-        <h1 class="text-2xl sm:text-3xl font-bold mb-1 gradient-text inline-block">Oracle Gallery</h1>
-        <p class="text-sm text-[var(--theme-text-muted)] mb-6">
-          {LIVE_COUNT} live &middot; {TOTAL_ORACLES}+ in the family
-        </p>
+      <div class="max-w-6xl mx-auto">
+        <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold mb-1 gradient-text inline-block">Oracle Gallery</h1>
+            <p id="gallery-subtitle" class="text-sm text-[var(--theme-text-muted)]">
+              {LIVE_COUNT} live &middot; {TOTAL_ORACLES}+ in the family
+            </p>
+          </div>
+          <FilterToggle />
+        </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
-          {oracles.map((oracle) => (
-            <a
-              href={`https://${oracle.domain}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
-            >
-              <!-- Screenshot -->
-              <div
-                class="absolute inset-0 bg-cover bg-top transition-transform duration-700 group-hover:scale-105"
-                style={`background-image: url('${oracle.screenshot}'); background-color: ${oracle.background}`}
-              ></div>
-
-              <!-- Hover overlay — macOS translucent -->
-              <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-md bg-black/10 saturate-[2]"></div>
-
-              <!-- Hover content — centered -->
-              <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out">
-                <p class="text-lg font-semibold mb-1 text-white drop-shadow-md">{oracle.name}</p>
-                <p class="text-xs font-mono text-white/70 drop-shadow-sm">{oracle.domain}</p>
-              </div>
-
-              <!-- LIVE badge — always visible -->
-              {oracle.live && (
-                <span class="absolute top-3 right-3 flex items-center gap-1 text-[10px] font-medium px-2 py-0.5 rounded-full bg-black/40 text-emerald-400 backdrop-blur-sm">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-glow"></span>
-                  LIVE
-                </span>
-              )}
-            </a>
+        <div class="masonry-grid reveal">
+          {liveOracles.map((o) => (
+            <div class="masonry-item">
+              <GalleryCard oracle={o.data} />
+            </div>
+          ))}
+          {knownOracles.map((o) => (
+            <div class="masonry-item">
+              <PlaceholderCard oracle={o.data} />
+            </div>
           ))}
         </div>
       </div>
@@ -165,11 +109,11 @@ const steps = [
 
         <!-- Dot grid -->
         <div class="grid grid-cols-10 sm:grid-cols-14 gap-2.5 max-w-xl mx-auto mb-10 reveal" id="dot-grid">
-          {oracles.map((oracle) => (
+          {liveOracles.map((o) => (
             <div
               class="oracle-dot lit"
-              style={`background:${oracle.primary}; --dot-color:${oracle.primary}`}
-              title={oracle.name}
+              style={`background:${o.data.primary}; --dot-color:${o.data.primary}`}
+              title={o.data.name}
             ></div>
           ))}
           {Array.from({ length: DIM_COUNT }).map(() => (
@@ -245,7 +189,7 @@ const steps = [
     <footer class="section-border py-12 px-4">
       <div class="max-w-6xl mx-auto text-center">
         <div class="flex items-center justify-center gap-2 mb-3">
-          <span class="text-xl">◉</span>
+          <span class="text-xl">🔮</span>
           <span class="font-semibold text-[var(--theme-text)]">Landing Oracle</span>
           <span class="text-xs text-[var(--theme-text-muted)]">#154</span>
         </div>
@@ -269,8 +213,6 @@ const steps = [
   <script>
     const reveals = document.querySelectorAll(".reveal");
     if (reveals.length > 0) {
-      // Content is visible by default (no JS = no hidden content).
-      // Add animate-in class to enable transitions, then observe.
       reveals.forEach((el) => el.classList.add("animate-in"));
 
       const observer = new IntersectionObserver(
