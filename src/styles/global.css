@@ -123,9 +123,73 @@ body {
   box-shadow: 0 0 12px 3px var(--dot-color, var(--theme-primary));
 }
 
+.oracle-dot.known {
+  opacity: 0.5;
+  box-shadow: 0 0 6px 1px var(--dot-color, var(--theme-primary));
+}
+
+.oracle-dot.known:hover {
+  opacity: 1;
+}
+
 .oracle-dot.dim {
   background: rgba(var(--theme-primary-rgb), 0.25);
   border: 1px solid rgba(var(--theme-primary-rgb), 0.1);
+}
+
+/* ─── Dot tooltip ─── */
+.oracle-dot.has-tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.oracle-dot.has-tooltip::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--theme-text);
+  background: var(--theme-surface);
+  border: 1px solid var(--theme-border);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.oracle-dot.has-tooltip:hover::after {
+  opacity: 1;
+}
+
+/* ─── Dot screenshot preview ─── */
+.oracle-dot.has-preview::before {
+  content: "";
+  position: absolute;
+  bottom: calc(100% + 26px);
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  width: 180px;
+  height: 120px;
+  background: var(--preview-img) center/cover no-repeat;
+  border-radius: 8px;
+  border: 1px solid var(--theme-border);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 11;
+}
+
+.oracle-dot.has-preview:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
 }
 
 /* ─── Animations ─── */
@@ -163,33 +227,17 @@ body {
   }
 }
 
-/* ─── Masonry grid ─── */
-.masonry-grid {
-  columns: 1;
-  column-gap: 1rem;
+/* ─── Gallery layout ─── */
+.gallery-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 @media (min-width: 640px) {
-  .masonry-grid {
-    columns: 2;
+  .gallery-layout {
+    grid-template-columns: 1fr 1fr;
   }
-}
-
-@media (min-width: 1024px) {
-  .masonry-grid {
-    columns: 3;
-  }
-}
-
-@media (min-width: 1280px) {
-  .masonry-grid {
-    columns: 4;
-  }
-}
-
-.masonry-item {
-  break-inside: avoid;
-  margin-bottom: 1rem;
 }
 
 /* ─── Section borders ─── */

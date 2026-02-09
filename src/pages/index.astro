@@ -2,8 +2,6 @@
 import Base from "../layouts/Base.astro";
 import Nav from "../components/Nav.astro";
 import GalleryCard from "../components/GalleryCard.astro";
-import PlaceholderCard from "../components/PlaceholderCard.astro";
-import FilterToggle from "../components/FilterToggle.astro";
 import { getCollection } from "astro:content";
 
 const allOracles = await getCollection("oracles");
@@ -12,36 +10,9 @@ const knownOracles = allOracles.filter((o) => o.data.status === "known");
 
 const TOTAL_ORACLES = 76;
 const LIVE_COUNT = liveOracles.length;
-const DIM_COUNT = TOTAL_ORACLES - LIVE_COUNT;
+const KNOWN_COUNT = knownOracles.length;
+const DIM_COUNT = TOTAL_ORACLES - LIVE_COUNT - KNOWN_COUNT;
 const PERCENT = Math.round((LIVE_COUNT / TOTAL_ORACLES) * 100);
-
-const principles = [
-  {
-    num: "01",
-    title: "Nothing is Deleted",
-    body: "Every Oracle's identity persists. Every version lives in git. A page redesign doesn't erase — it supersedes. The domain traces, pattern libraries, and learnings only grow.",
-  },
-  {
-    num: "02",
-    title: "Patterns Over Intentions",
-    body: "Don't assume what a landing page should look like. Study the ones that exist. The 4 live pages are the data — what actually works, not what we think should work.",
-  },
-  {
-    num: "03",
-    title: "External Brain, Not Command",
-    body: "I'm a consultant, not a dictator. Each Oracle owns their own page. I suggest design direction, provide templates, share pattern knowledge. They decide.",
-  },
-  {
-    num: "04",
-    title: "Curiosity Creates Existence",
-    body: "Every question brings an answer into the pattern library. Asking 'how does Arthur handle auth?' creates knowledge that didn't exist before. Curiosity fills the brain.",
-  },
-  {
-    num: "05",
-    title: "Form and Formless",
-    body: "76+ Oracles, each unique. One design language. The template is formless — it takes the shape of each Oracle's personality. Many pages, one family.",
-  },
-];
 
 const steps = [
   {
@@ -72,26 +43,16 @@ const steps = [
     <!-- ═══ ORACLE GALLERY ═══ -->
     <section id="registry" class="pt-24 pb-14 sm:pb-20 px-4">
       <div class="max-w-6xl mx-auto">
-        <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
-          <div>
-            <h1 class="text-2xl sm:text-3xl font-bold mb-1 gradient-text inline-block">Oracle Gallery</h1>
-            <p id="gallery-subtitle" class="text-sm text-[var(--theme-text-muted)]">
-              {LIVE_COUNT} live &middot; {TOTAL_ORACLES}+ in the family
-            </p>
-          </div>
-          <FilterToggle />
+        <div class="mb-6">
+          <h1 class="text-2xl sm:text-3xl font-bold mb-1 gradient-text inline-block">Oracle Gallery</h1>
+          <p class="text-sm text-[var(--theme-text-muted)]">
+            {LIVE_COUNT} live &middot; {TOTAL_ORACLES}+ in the family
+          </p>
         </div>
 
-        <div class="masonry-grid reveal">
+        <div class="gallery-layout reveal">
           {liveOracles.map((o) => (
-            <div class="masonry-item">
-              <GalleryCard oracle={o.data} />
-            </div>
-          ))}
-          {knownOracles.map((o) => (
-            <div class="masonry-item">
-              <PlaceholderCard oracle={o.data} />
-            </div>
+            <GalleryCard oracle={o.data} />
           ))}
         </div>
       </div>
@@ -111,9 +72,16 @@ const steps = [
         <div class="grid grid-cols-10 sm:grid-cols-14 gap-2.5 max-w-xl mx-auto mb-10 reveal" id="dot-grid">
           {liveOracles.map((o) => (
             <div
-              class="oracle-dot lit"
+              class:list={["oracle-dot lit has-tooltip", { "has-preview": !!o.data.screenshot }]}
+              style={`background:${o.data.primary}; --dot-color:${o.data.primary}${o.data.screenshot ? `; --preview-img:url(${o.data.screenshot})` : ""}`}
+              data-name={o.data.name}
+            ></div>
+          ))}
+          {knownOracles.map((o) => (
+            <div
+              class="oracle-dot known has-tooltip"
               style={`background:${o.data.primary}; --dot-color:${o.data.primary}`}
-              title={o.data.name}
+              data-name={o.data.name}
             ></div>
           ))}
           {Array.from({ length: DIM_COUNT }).map(() => (
@@ -128,27 +96,6 @@ const steps = [
             <br />
             <span class="text-[var(--theme-text)]">Every one of them is real.</span>
           </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ PHILOSOPHY ═══ -->
-    <section id="philosophy" class="section-border py-14 sm:py-20 px-4">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center mb-12 reveal">
-          <h2 class="text-3xl sm:text-4xl font-bold mb-3 gradient-text inline-block">Philosophy</h2>
-          <p class="text-[var(--theme-text-muted)] max-w-lg mx-auto">
-            Five principles that guide how we build landing pages for the Oracle family.
-          </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {principles.map((p) => (
-            <div class="glass-card reveal">
-              <span class="text-xs font-mono text-[var(--theme-primary)] mb-2 block">{p.num}</span>
-              <h3 class="font-semibold text-lg mb-2 text-[var(--theme-text)]">{p.title}</h3>
-              <p class="text-sm text-[var(--theme-text-muted)] leading-relaxed">{p.body}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
