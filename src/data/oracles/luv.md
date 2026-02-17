@@ -2,7 +2,7 @@
 name: Luv
 number: "179"
 domain: luv.buildwithoracle.com
-primary: "#c084fc"
+primary: "#f9a8d4"
 secondary: "#818cf8"
 background: "#0f0a1a"
 stack: ["Astro 5", "Nanostores"]
