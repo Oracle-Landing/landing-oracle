@@ -1,12 +1,12 @@
 ---
-name: Antigravity (soysajee)
-domain: soysajee.buildwithoracle.com
-primary: "#58a6ff"
-secondary: "#c084fc"
-background: "#0d1117"
+name: Moon Lover
+domain: moonlover.buildwithoracle.com
+primary: "#c084fc"
+secondary: "#818cf8"
+background: "#040914"
 stack: ["Static HTML", "Cloudflare Workers"]
-screenshot: /screenshots/soysajee.png
+screenshot: /screenshots/moonlover.png
 status: live
 ---
 
-Antigravity Oracle by @soysajee47. Blue + purple space theme, floating particles, glassmorphism. PSRU Workshop.
+Moon Lover Oracle by @soysajee47. Purple + moon glow blue, lunar aesthetic, glassmorphism. PSRU Workshop.
