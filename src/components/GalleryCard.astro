@@ -8,6 +8,7 @@ interface Props {
     secondary: string;
     background: string;
     screenshot?: string;
+    stack?: string[];
     status: "live" | "known";
   };
 }
@@ -21,6 +22,8 @@ const { oracle } = Astro.props;
   rel="noopener noreferrer"
   class="gallery-card group relative rounded-2xl overflow-hidden block"
   data-status="live"
+  data-name={oracle.name.toLowerCase()}
+  data-stack={oracle.stack?.join(",").toLowerCase() ?? ""}
 >
   <!-- Screenshot -->
   <div class="aspect-[16/10] relative" style={`background-color: ${oracle.background}`}>

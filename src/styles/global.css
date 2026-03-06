@@ -240,6 +240,57 @@ body {
   }
 }
 
+/* ─── Filter chips ─── */
+.filter-chip {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: 1px solid var(--theme-border);
+  background: transparent;
+  color: var(--theme-text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-chip:hover {
+  border-color: rgba(var(--theme-primary-rgb), 0.4);
+  color: var(--theme-text);
+}
+
+.filter-chip.active {
+  background: rgba(var(--theme-primary-rgb), 0.15);
+  border-color: rgba(var(--theme-primary-rgb), 0.4);
+  color: var(--theme-primary);
+}
+
+/* ─── Gallery card hide/show ─── */
+.gallery-card.hidden-by-filter {
+  display: none;
+}
+
+/* ─── Dark scrollbar ─── */
+html {
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
 /* ─── Section borders ─── */
 .section-border {
   border-top: 1px solid var(--theme-border);

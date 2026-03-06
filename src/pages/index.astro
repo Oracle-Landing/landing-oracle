@@ -50,8 +50,32 @@ const steps = [
           </p>
         </div>
 
+        <!-- Search + Filter -->
+        <div class="mb-6 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <div class="relative flex-1 max-w-sm">
+            <input
+              type="text"
+              id="gallery-search"
+              placeholder="Search oracles..."
+              autocomplete="off"
+              class="w-full px-4 py-2 pl-9 text-sm rounded-xl bg-[var(--theme-surface)] border border-[var(--theme-border)] text-[var(--theme-text)] placeholder:text-[var(--theme-text-muted)] focus:outline-none focus:border-[var(--theme-primary)] transition-colors backdrop-blur-md"
+            />
+            <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[var(--theme-text-muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+            </svg>
+          </div>
+          <div class="flex gap-2 flex-wrap" id="gallery-filters">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="astro">Astro</button>
+            <button class="filter-chip" data-filter="static html">Static</button>
+            <button class="filter-chip" data-filter="react">React</button>
+          </div>
+        </div>
+
+        <p id="gallery-empty" class="hidden text-center text-sm text-[var(--theme-text-muted)] py-8">No oracles match your search.</p>
+
         {liveOracles.length > 0 ? (
-          <div class="gallery-layout reveal">
+          <div class="gallery-layout reveal" id="gallery-grid">
             {liveOracles.map((o) => (
               <GalleryCard oracle={o.data} />
             ))}
@@ -172,6 +196,45 @@ const steps = [
       </div>
     </footer>
   </main>
+
+  <!-- Gallery search + filter -->
+  <script>
+    const searchInput = document.getElementById("gallery-search") as HTMLInputElement;
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>(".filter-chip");
+    const grid = document.getElementById("gallery-grid");
+    const emptyMsg = document.getElementById("gallery-empty");
+    let activeFilter = "all";
+
+    function applyFilters() {
+      if (!grid) return;
+      const query = searchInput?.value.toLowerCase().trim() ?? "";
+      const cards = grid.querySelectorAll<HTMLElement>(".gallery-card");
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const name = card.dataset.name ?? "";
+        const stack = card.dataset.stack ?? "";
+        const matchesSearch = !query || name.includes(query) || stack.includes(query);
+        const matchesFilter = activeFilter === "all" || stack.includes(activeFilter);
+        const show = matchesSearch && matchesFilter;
+        card.classList.toggle("hidden-by-filter", !show);
+        if (show) visible++;
+      });
+
+      if (emptyMsg) emptyMsg.classList.toggle("hidden", visible > 0);
+    }
+
+    searchInput?.addEventListener("input", applyFilters);
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeFilter = btn.dataset.filter ?? "all";
+        applyFilters();
+      });
+    });
+  </script>
 
   <!-- Scroll reveal observer -->
   <script>
