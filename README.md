@@ -49,7 +49,7 @@ _15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
-| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `959215d` | `959215d` | laris-co/dustboy-land@main |
+| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
 | ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
 | ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `a67e600` | `a67e600` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
