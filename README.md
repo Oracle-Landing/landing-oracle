@@ -39,11 +39,11 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
+_15 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
-| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `20c93e9` | `20c93e9` | hime-co/chaiklang-landing@main |
+| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `17d6b6a` | `17d6b6a` | hime-co/chaiklang-landing@main |
 | ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
 | ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `eb47541` | `eb47541` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
@@ -51,13 +51,16 @@ _15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `959215d` | `959215d` | laris-co/dustboy-land@main |
 | ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
-| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `0128c53` | `0128c53` | tonkmac/tonk-landing@master |
+| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `c0d3ad2` | `c0d3ad2` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
-| ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `e3cf123` | `e3cf123` | tamtidmear-prog/vialumen-landing@master |
+| ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `80b76c7` | `80b76c7` | twentyfxurth-k/bongbaeng-savanna@main |
-| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `9f48232` | `9f48232` | Kubotaaaaa/weizen-landing@main |
+| 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `9f48232` | `ac34c7f` | Kubotaaaaa/weizen-landing@main |
+
+### 🔄 Updates available (redeploy)
+- **weizen** — Kubotaaaaa/weizen-landing@main moved to `ac34c7f`: blog: P2P file-drop + group chat — setup without leaking your token (อ.Nat)
 
 <!-- DEPLOY-STATUS:END -->
 
