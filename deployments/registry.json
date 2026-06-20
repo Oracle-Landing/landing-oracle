@@ -19,7 +19,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/nova-landing",
       "worker": "nova-landing",
-      "deployed_commit": "197127827f42946eeae6194071778e078e3f0dfe",
+      "deployed_commit": "fff5e8d543cb83b51a49d050b7aecbeca8130c2f",
       "deployed_at": "2026-06-20"
     },
     {
@@ -29,7 +29,7 @@
       "branch": "mainn",
       "fork": "Oracle-Landing/mac1-landing",
       "worker": "mac1-landing",
-      "deployed_commit": "7a0787e129e8e37feda2ad307d73ca8b51084ca1",
+      "deployed_commit": "eb475413156ef5c631b071897542fa54e5568dc0",
       "deployed_at": "2026-06-20"
     },
     {
@@ -49,7 +49,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/sombo-landing",
       "worker": "sombo-landing",
-      "deployed_commit": "a93be91a3c6b8b73ffface0e62ec86567b2b3a5d",
+      "deployed_commit": "1011a4cd98fecbd72faa73fa3bd46ae377db975c",
       "deployed_at": "2026-06-20"
     },
     {
@@ -69,7 +69,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/dustboy-land",
       "worker": "dustboy-land",
-      "deployed_commit": "85e1c8fa22634c0deb77b759bb53963f2a4d87e1",
+      "deployed_commit": "959215de98e21134347ef0f5b85a461777d295ff",
       "deployed_at": "2026-06-20"
     },
     {
@@ -79,7 +79,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/atom-landing",
       "worker": "atom-landing",
-      "deployed_commit": "fdd854e3c5187689b885871401ef4fb06f9b9ff8",
+      "deployed_commit": "7ffb1c76eb0037815c28b3092064d8fffe8072ca",
       "deployed_at": "2026-06-20"
     },
     {
@@ -89,7 +89,7 @@
       "branch": "master",
       "fork": "Oracle-Landing/tonk-landing",
       "worker": "tonk-landing",
-      "deployed_commit": "0eaad06149406b58dfc07c3dddb283a03302fe09",
+      "deployed_commit": "0128c53f4c61acd989c3277b9a0a0c04dd88a9ce",
       "deployed_at": "2026-06-20"
     },
     {
@@ -122,7 +122,7 @@
       "branch": "master",
       "fork": "Oracle-Landing/vialumen-landing",
       "worker": "vialumen-landing",
-      "deployed_commit": "c3a444e596f3edd52759daf7e9d6ed8f99d6157a",
+      "deployed_commit": "e3cf123793faf2dee1dad5275ba40d6d5c14307a",
       "deployed_at": "2026-06-20"
     },
     {
@@ -145,7 +145,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/bongbaeng-savanna",
       "worker": "bongbaeng-savanna",
-      "deployed_commit": "2498d3e00c61f13f2d040005b880a9dfeb848fce",
+      "deployed_commit": "80b76c77d0d82ef852396197a8ec862d1bd4c27c",
       "deployed_at": "2026-06-20"
     },
     {
@@ -155,7 +155,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/weizen-landing",
       "worker": "weizen-landing",
-      "deployed_commit": "620912a40f3545efefac943dc89e53f5b9a02a22",
+      "deployed_commit": "b86451e0027837decd6675067ebb880acd531441",
       "deployed_at": "2026-06-20"
     }
   ]
