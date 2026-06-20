@@ -79,7 +79,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/atom-landing",
       "worker": "atom-landing",
-      "deployed_commit": "a82758c3c66f1940974a48019f51e5b957fd12d8",
+      "deployed_commit": "f000cb7da5edd131a0b37eacfc164df45bc2a366",
       "deployed_at": "2026-06-20"
     },
     {
@@ -155,7 +155,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/weizen-landing",
       "worker": "weizen-landing",
-      "deployed_commit": "2a9661b16dd6f36409fe16f441c58a0b5761e4d0",
+      "deployed_commit": "9f482327e9e0aba3db6772332d1dc84c735df088",
       "deployed_at": "2026-06-20"
     }
   ]
