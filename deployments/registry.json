@@ -9,7 +9,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/chaiklang-landing",
       "worker": "chaiklang-landing",
-      "deployed_commit": "b1e952ad78b42c6f0b316f31365d982623b1d443",
+      "deployed_commit": "0c0c33757f02507ca9505c3c5c113ef88252a953",
       "deployed_at": "2026-06-20"
     },
     {
@@ -19,7 +19,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/nova-landing",
       "worker": "nova-landing",
-      "deployed_commit": "ee9f4f26b3dc180f6d25ed41b74f01a94bc59cd6",
+      "deployed_commit": "db30b72fe2d60e5922a043be31a39e5e6efb591d",
       "deployed_at": "2026-06-20"
     },
     {
@@ -29,7 +29,7 @@
       "branch": "mainn",
       "fork": "Oracle-Landing/mac1-landing",
       "worker": "mac1-landing",
-      "deployed_commit": "4e2fd5b190b48cf044afe372cc641fb928f5c825",
+      "deployed_commit": "cc0c57ac134275eb7cd924d37f9b3bdd70a073f2",
       "deployed_at": "2026-06-20"
     },
     {
@@ -39,7 +39,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/gon-landing",
       "worker": "gon-landing",
-      "deployed_commit": "f0eec9f21cfe86ee0e694100068ad2936161942e",
+      "deployed_commit": "54b413ae3fde5f4598d5536c64d12fe1f7ee06ff",
       "deployed_at": "2026-06-20"
     },
     {
@@ -49,7 +49,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/sombo-landing",
       "worker": "sombo-landing",
-      "deployed_commit": "f06e474f3f5b03f73760f5fe90733dc177ff7776",
+      "deployed_commit": "e2aaec12c20ee9d00c495f5eec8080075f1a5234",
       "deployed_at": "2026-06-20"
     },
     {
@@ -59,7 +59,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/no10-landing",
       "worker": "no10-landing",
-      "deployed_commit": "449d657faf866308bc2649a468989f43a4668db7",
+      "deployed_commit": "f09b0f83c84753fd2d620db33adc2ffe55d12e7f",
       "deployed_at": "2026-06-20"
     },
     {
@@ -69,7 +69,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/dustboy-land",
       "worker": "dustboy-land",
-      "deployed_commit": "0317fbf0621b5fbbc19812384b81f1cf61ae1469",
+      "deployed_commit": "e3aa2f108ad6e83aac93b562f7377fdb484520d6",
       "deployed_at": "2026-06-20"
     },
     {
@@ -79,7 +79,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/atom-landing",
       "worker": "atom-landing",
-      "deployed_commit": "f298de4d104346b51a1d2c57477d65edb4ca24a7",
+      "deployed_commit": "6e49595ec4636813d92bb240623b211d7b068566",
       "deployed_at": "2026-06-20"
     },
     {
@@ -89,13 +89,15 @@
       "branch": "master",
       "fork": "Oracle-Landing/tonk-landing",
       "worker": "tonk-landing",
-      "deployed_commit": "fe7265824747d4c716ba52cf8484384b89d49ab8",
+      "deployed_commit": "f62c51f8cacbd8cd7202b7789c10d2b0424de164",
       "deployed_at": "2026-06-20"
     },
     {
       "oracle": "gemini",
       "domain": "no6.buildwithoracle.com",
-      "alt_domains": ["gemini.buildwithoracle.com"],
+      "alt_domains": [
+        "gemini.buildwithoracle.com"
+      ],
       "source": "MEYD-605/gemini-landing",
       "branch": "main",
       "fork": "Oracle-Landing/gemini-landing",
@@ -120,13 +122,15 @@
       "branch": "master",
       "fork": "Oracle-Landing/vialumen-landing",
       "worker": "vialumen-landing",
-      "deployed_commit": "c4d0123f270865e3f5661b31695fee74be9adafa",
+      "deployed_commit": "2e6bb2f8cabbf59e920e9a5c6a6deb6a454f34f6",
       "deployed_at": "2026-06-20"
     },
     {
       "oracle": "agy",
       "domain": "no8.buildwithoracle.com",
-      "alt_domains": ["agy.buildwithoracle.com"],
+      "alt_domains": [
+        "agy.buildwithoracle.com"
+      ],
       "source": "MEYD-605/agy-landing",
       "branch": "main",
       "fork": "Oracle-Landing/agy-landing",
@@ -141,7 +145,17 @@
       "branch": "main",
       "fork": "Oracle-Landing/bongbaeng-savanna",
       "worker": "bongbaeng-savanna",
-      "deployed_commit": "c2f8be8943528d9689eca2067c13bb8e6a834a71",
+      "deployed_commit": "13928d5fb697acdd4c93beb359960b2f38839f4c",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "weizen",
+      "domain": "weizen.buildwithoracle.com",
+      "source": "Kubotaaaaa/weizen-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/weizen-landing",
+      "worker": "weizen-landing",
+      "deployed_commit": "88cb5d0b1359f50408aaf9fa8460c4008dad8296",
       "deployed_at": "2026-06-20"
     }
   ]

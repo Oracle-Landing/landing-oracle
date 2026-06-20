@@ -16,7 +16,7 @@ on:
       - ".github/workflows/check-deploys.yml"
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 jobs:
@@ -36,11 +36,24 @@ jobs:
         run: |
           node scripts/check-deploys.mjs --markdown > report.md
           node scripts/check-deploys.mjs --json > report.json
+          node scripts/check-deploys.mjs --write-readme
           UPDATES=$(node -e "console.log(require('./report.json').summary.updates)")
           DOWN=$(node -e "console.log(require('./report.json').summary.down)")
           echo "updates=$UPDATES" >> "$GITHUB_OUTPUT"
           echo "down=$DOWN" >> "$GITHUB_OUTPUT"
           cat report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Commit refreshed README status table
+        run: |
+          if ! git diff --quiet README.md; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: refresh deploy-status table [skip ci]"
+            git push
+          else
+            echo "README unchanged"
+          fi
 
       - name: Upsert tracking issue when updates or outages exist
         if: steps.check.outputs.updates != '0' || steps.check.outputs.down != '0'

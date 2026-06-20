@@ -11,7 +11,7 @@
 //
 // Auth: set GITHUB_TOKEN to raise the API rate limit (CI provides it automatically).
 
-import { readFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 
@@ -85,13 +85,12 @@ const down = rows.filter((r) => r.http !== 200);
 
 const mode = process.argv[2] || "";
 
-if (mode === "--json") {
-  console.log(JSON.stringify({ updated: registry.updated, rows, summary: { total: rows.length, updates: updates.length, errors: errors.length, down: down.length } }, null, 2));
-} else if (mode === "--markdown") {
-  const icon = (r) =>
-    r.state === "update-available" ? "🔄" : r.state === "error" ? "⚠️" : r.http !== 200 ? "🔴" : "✅";
-  let md = `## 🔮 Landing Oracle — Deploy Status\n\n`;
-  md += `${rows.length} deployments · **${updates.length} update(s) available** · ${errors.length} error(s) · ${down.length} down\n\n`;
+const icon = (r) =>
+  r.state === "update-available" ? "🔄" : r.state === "error" ? "⚠️" : r.http !== 200 ? "🔴" : "✅";
+
+function buildMarkdown(heading = true) {
+  let md = heading ? `## 🔮 Landing Oracle — Deploy Status\n\n` : "";
+  md += `_${rows.length} deployments · **${updates.length} update(s) available** · ${errors.length} error(s) · ${down.length} down · updated ${registry.updated}_\n\n`;
   md += `| | Oracle | Domain | Deployed | Latest | Source |\n|---|---|---|---|---|---|\n`;
   for (const r of rows) {
     md += `| ${icon(r)} | ${r.oracle} | [${r.domain}](https://${r.domain}) | \`${r.deployed}\` | \`${r.latest}\` | ${r.source}@${r.branch} |\n`;
@@ -100,7 +99,23 @@ if (mode === "--json") {
     md += `\n### 🔄 Updates available (redeploy)\n`;
     for (const r of updates) md += `- **${r.oracle}** — ${r.source}@${r.branch} moved to \`${r.latest}\`: ${r.latestMessage}\n`;
   }
-  console.log(md);
+  return md;
+}
+
+if (mode === "--json") {
+  console.log(JSON.stringify({ updated: registry.updated, rows, summary: { total: rows.length, updates: updates.length, errors: errors.length, down: down.length } }, null, 2));
+} else if (mode === "--markdown") {
+  console.log(buildMarkdown(true));
+} else if (mode === "--write-readme") {
+  const readmePath = join(__dirname, "..", "README.md");
+  const START = "<!-- DEPLOY-STATUS:START -->";
+  const END = "<!-- DEPLOY-STATUS:END -->";
+  let readme = readFileSync(readmePath, "utf8");
+  const block = `${START}\n${buildMarkdown(false)}\n${END}`;
+  const re = new RegExp(`${START}[\\s\\S]*?${END}`);
+  readme = re.test(readme) ? readme.replace(re, block) : readme + `\n\n${block}\n`;
+  writeFileSync(readmePath, readme);
+  console.log(`README.md deploy-status block updated (${rows.length} rows, ${updates.length} updates).`);
 } else {
   const icon = (r) =>
     r.state === "update-available" ? "🔄" : r.state === "error" ? "⚠️" : r.http !== 200 ? "🔴" : "✅";
