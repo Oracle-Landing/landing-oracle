@@ -57,6 +57,19 @@ if (!source) done({ issue: issueNum, ok: false, skip: "no-source-repo" });
 // Is this an already-deployed Oracle? (redeploy-notice case)
 const existing = registry.deployments.find((d) => d.source === source);
 
+// Redeploy-notice for an EXISTING Oracle: do NOT re-deploy from its fork here
+// (the fork can be stale, and this path isn't SSR/secret-aware). The hash-based
+// freshness loop redeploys existing Oracles from upstream. Just acknowledge + close.
+if (existing) {
+  try {
+    const msg = `## ♻️ Noted — ${existing.oracle} is auto-tracked\n\n**https://${existing.domain}** is kept current by the deploy-freshness loop (it redeploys from \`${existing.source}@${existing.branch}\` whenever you push, with a secret scan + SSR-aware config). No manual redeploy needed — closing. If something specific is missing, reopen with details. 🙏 — Landing Oracle (auto-loop)`;
+    writeFileSync("/tmp/_deploy_comment.md", msg);
+    sh(`gh issue comment ${issueNum} --repo ${REPO} --body-file /tmp/_deploy_comment.md`);
+    sh(`gh issue close ${issueNum} --repo ${REPO} --reason completed`);
+  } catch {}
+  done({ issue: issueNum, ok: true, oracle: existing.oracle, existing: true, note: "redeploy-handled-by-loop" });
+}
+
 // 3. Parse subdomain(s); else fall back to the existing Oracle's domain(s).
 const subs = [...new Set(
   [...body.matchAll(/\b([a-z0-9][a-z0-9-]*)\.buildwithoracle\.com/gi)]

@@ -29,7 +29,7 @@
       "branch": "mainn",
       "fork": "Oracle-Landing/mac1-landing",
       "worker": "mac1-landing",
-      "deployed_commit": "4e2fd5b190b48cf044afe372cc641fb928f5c825",
+      "deployed_commit": "eb475413156ef5c631b071897542fa54e5568dc0",
       "deployed_at": "2026-06-21"
     },
     {
@@ -69,7 +69,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/dustboy-land",
       "worker": "dustboy-land",
-      "deployed_commit": "0317fbf0621b5fbbc19812384b81f1cf61ae1469",
+      "deployed_commit": "959215de98e21134347ef0f5b85a461777d295ff",
       "deployed_at": "2026-06-21"
     },
     {
@@ -79,7 +79,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/atom-landing",
       "worker": "atom-landing",
-      "deployed_commit": "f298de4d104346b51a1d2c57477d65edb4ca24a7",
+      "deployed_commit": "f000cb7da5edd131a0b37eacfc164df45bc2a366",
       "deployed_at": "2026-06-21"
     },
     {
