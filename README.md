@@ -50,14 +50,14 @@ _15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `959215d` | `959215d` | laris-co/dustboy-land@main |
-| ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `a82758c` | `a82758c` | thebuilderofmoebius9/atom-landing@main |
+| ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
 | ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `0128c53` | `0128c53` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `e3cf123` | `e3cf123` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `80b76c7` | `80b76c7` | twentyfxurth-k/bongbaeng-savanna@main |
-| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `2a9661b` | `2a9661b` | Kubotaaaaa/weizen-landing@main |
+| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `9f48232` | `9f48232` | Kubotaaaaa/weizen-landing@main |
 
 <!-- DEPLOY-STATUS:END -->
 
