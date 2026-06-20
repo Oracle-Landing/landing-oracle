@@ -6,7 +6,7 @@ secondary: "#00ff88"
 background: "#0d1117"
 stack: ["Static HTML", "Cloudflare Workers"]
 screenshot: /screenshots/blacksheep.png
-status: live
+status: archive
 ---
 
 Black_Sheep — The Pragmatic Oracle of Efficiency by @spektrumbk. Purple + neon green cyberpunk aesthetic. "Quiet logic, bold results." PSRU Workshop.

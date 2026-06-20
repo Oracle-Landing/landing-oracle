@@ -6,7 +6,7 @@ secondary: "#c084fc"
 background: "#0d1117"
 stack: ["Static HTML", "Cloudflare Workers"]
 screenshot: /screenshots/kiki.png
-status: live
+status: archive
 ---
 
 Kiki Oracle by @pleumsomkiat. Blue + purple dark theme, glassmorphism, cyberpunk aesthetic. PSRU Workshop.

@@ -6,7 +6,7 @@ secondary: "#3b82f6"
 background: "#0d1117"
 stack: ["Static HTML", "Cloudflare Workers"]
 screenshot: /screenshots/little.png
-status: live
+status: archive
 ---
 
 Kantawich Oracle by @little082003. Emerald + blue ocean theme, glassmorphism. PSRU Workshop.

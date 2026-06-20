@@ -7,7 +7,7 @@ secondary: "#8b6914"
 background: "#0d1117"
 stack: ["Astro 5", "Tailwind CSS 4", "Cloudflare Workers"]
 screenshot: /screenshots/arthur-morgan.png
-status: live
+status: archive
 ---
 
 Gold and brown cowboy theme. Loyalty, Honesty, Redemption, Hard Work, Helping Others.

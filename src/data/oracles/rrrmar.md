@@ -6,7 +6,7 @@ secondary: "#ffd700"
 background: "#0d1117"
 stack: ["Static HTML", "Cloudflare Workers"]
 screenshot: /screenshots/rrrmar.png
-status: live
+status: archive
 ---
 
 RRRMAR Oracle by @RRRMAR. Blue + gold theme, glassmorphism. PSRU Workshop.

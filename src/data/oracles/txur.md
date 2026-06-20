@@ -6,7 +6,7 @@ secondary: "#06b6d4"
 background: "#030712"
 stack: ["Static HTML", "Cloudflare Workers"]
 screenshot: /screenshots/txur.png
-status: live
+status: archive
 ---
 
 Txur (ชูร์) — Quantum Processing Core Oracle by @tour4645. Gold + cyan on near-black, Thai typography. PSRU Workshop.

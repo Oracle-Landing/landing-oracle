@@ -6,7 +6,7 @@ secondary: "#00ccff"
 background: "#0d1117"
 stack: ["Static HTML", "Cloudflare Workers"]
 screenshot: /screenshots/kanyanat.png
-status: live
+status: archive
 ---
 
 The Unseen Force. Cyber green + blue, canvas animation. PSRU Workshop.
