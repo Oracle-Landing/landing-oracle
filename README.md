@@ -43,24 +43,24 @@ _15 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
-| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `b46acbc` | `b46acbc` | hime-co/chaiklang-landing@main |
-| ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `1971278` | `1971278` | anupob88/nova-landing@main |
-| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `7a0787e` | `7a0787e` | MEYD-605/mac1-landing@mainn |
+| 🔄 | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `b46acbc` | `20c93e9` | hime-co/chaiklang-landing@main |
+| ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
+| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `eb47541` | `eb47541` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
-| 🔄 | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `a93be91` | `476757c` | MEYD-605/sombo-landing@main |
+| ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
-| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `85e1c8f` | `85e1c8f` | laris-co/dustboy-land@main |
-| ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `fdd854e` | `fdd854e` | thebuilderofmoebius9/atom-landing@main |
-| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `0eaad06` | `0eaad06` | tonkmac/tonk-landing@master |
+| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `959215d` | `959215d` | laris-co/dustboy-land@main |
+| ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `7ffb1c7` | `7ffb1c7` | thebuilderofmoebius9/atom-landing@main |
+| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `0128c53` | `0128c53` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
-| ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `c3a444e` | `c3a444e` | tamtidmear-prog/vialumen-landing@master |
+| ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `e3cf123` | `e3cf123` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
-| ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `2498d3e` | `2498d3e` | twentyfxurth-k/bongbaeng-savanna@main |
-| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `620912a` | `620912a` | Kubotaaaaa/weizen-landing@main |
+| ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `80b76c7` | `80b76c7` | twentyfxurth-k/bongbaeng-savanna@main |
+| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `b86451e` | `b86451e` | Kubotaaaaa/weizen-landing@main |
 
 ### 🔄 Updates available (redeploy)
-- **sombo** — MEYD-605/sombo-landing@main moved to `476757c`: Merge pull request #23 from MEYD-605/feat/sombo-full-text-books
+- **chaiklang** — hime-co/chaiklang-landing@main moved to `20c93e9`: redesign: info hierarchy (story-first) + book teasers + SVG gimmick
 
 <!-- DEPLOY-STATUS:END -->
 
