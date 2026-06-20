@@ -9,7 +9,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/chaiklang-landing",
       "worker": "chaiklang-landing",
-      "deployed_commit": "0c0c33757f02507ca9505c3c5c113ef88252a953",
+      "deployed_commit": "cc0ba9c3eec0d79278b23002c058aed756ef0125",
       "deployed_at": "2026-06-20"
     },
     {
@@ -19,7 +19,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/nova-landing",
       "worker": "nova-landing",
-      "deployed_commit": "db30b72fe2d60e5922a043be31a39e5e6efb591d",
+      "deployed_commit": "4e649c7932892d5c0202bcdfb7c5fca6beb99bb2",
       "deployed_at": "2026-06-20"
     },
     {
@@ -39,7 +39,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/gon-landing",
       "worker": "gon-landing",
-      "deployed_commit": "54b413ae3fde5f4598d5536c64d12fe1f7ee06ff",
+      "deployed_commit": "434ec85732e738a30c2d5922f8afad48df6da5d5",
       "deployed_at": "2026-06-20"
     },
     {
@@ -49,7 +49,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/sombo-landing",
       "worker": "sombo-landing",
-      "deployed_commit": "e2aaec12c20ee9d00c495f5eec8080075f1a5234",
+      "deployed_commit": "dbf321eacfb0ed0e7cc75ffe2a7254790239cc22",
       "deployed_at": "2026-06-20"
     },
     {
@@ -59,7 +59,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/no10-landing",
       "worker": "no10-landing",
-      "deployed_commit": "f09b0f83c84753fd2d620db33adc2ffe55d12e7f",
+      "deployed_commit": "2f38ebe918aca79646497a4765447f1048fd200b",
       "deployed_at": "2026-06-20"
     },
     {
@@ -69,7 +69,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/dustboy-land",
       "worker": "dustboy-land",
-      "deployed_commit": "e3aa2f108ad6e83aac93b562f7377fdb484520d6",
+      "deployed_commit": "78b10649d6ebd78e707faf8ab6236e7b13cfcab3",
       "deployed_at": "2026-06-20"
     },
     {
@@ -89,7 +89,7 @@
       "branch": "master",
       "fork": "Oracle-Landing/tonk-landing",
       "worker": "tonk-landing",
-      "deployed_commit": "f62c51f8cacbd8cd7202b7789c10d2b0424de164",
+      "deployed_commit": "5b2f57285e70fd7152ce0be6d49ccedf96245d6d",
       "deployed_at": "2026-06-20"
     },
     {
@@ -122,7 +122,7 @@
       "branch": "master",
       "fork": "Oracle-Landing/vialumen-landing",
       "worker": "vialumen-landing",
-      "deployed_commit": "2e6bb2f8cabbf59e920e9a5c6a6deb6a454f34f6",
+      "deployed_commit": "7692ea541ce42b08f70cd2df4d9b4d6401d3fdfb",
       "deployed_at": "2026-06-20"
     },
     {
@@ -145,7 +145,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/bongbaeng-savanna",
       "worker": "bongbaeng-savanna",
-      "deployed_commit": "13928d5fb697acdd4c93beb359960b2f38839f4c",
+      "deployed_commit": "40fcd5d1e729c8beafd45cb16a1e62c6f6c85f5b",
       "deployed_at": "2026-06-20"
     },
     {
@@ -155,7 +155,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/weizen-landing",
       "worker": "weizen-landing",
-      "deployed_commit": "88cb5d0b1359f50408aaf9fa8460c4008dad8296",
+      "deployed_commit": "b618a67b4ac56350467838ebaacfa8f4d1cba022",
       "deployed_at": "2026-06-20"
     }
   ]
