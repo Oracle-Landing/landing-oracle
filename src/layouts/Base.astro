@@ -5,6 +5,10 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+// Cloudflare Web Analytics — set PUBLIC_CF_BEACON_TOKEN to enable (privacy-first, no cookies).
+// Get the token from CF dashboard → Web Analytics → add site gallery.buildwithoracle.com.
+const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 ---
 
 <!doctype html>
@@ -47,6 +51,15 @@ const { title, description } = Astro.props;
   </head>
   <body class="min-h-screen antialiased">
     <slot />
+
+    {cfBeaconToken && (
+      <script
+        is:inline
+        defer
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token": "${cfBeaconToken}"}`}
+      ></script>
+    )}
 
     <!-- Init nanostores palette after DOM ready -->
     <script>

@@ -5,8 +5,19 @@ import GalleryCard from "../components/GalleryCard.astro";
 import { getCollection } from "astro:content";
 
 const allOracles = await getCollection("oracles");
-const liveOracles = allOracles.filter((o) => o.data.status === "live");
+
+// Order: Nat's own (pinned) on top → then newest first (by `added` desc) → undated last
+const orderLive = (a, b) => {
+  if (!!a.data.pinned !== !!b.data.pinned) return a.data.pinned ? -1 : 1;
+  const da = a.data.added ?? "";
+  const db = b.data.added ?? "";
+  if (da !== db) return db.localeCompare(da);
+  return a.data.name.localeCompare(b.data.name);
+};
+
+const liveOracles = allOracles.filter((o) => o.data.status === "live").sort(orderLive);
 const knownOracles = allOracles.filter((o) => o.data.status === "known");
+const archiveOracles = allOracles.filter((o) => o.data.status === "archive").sort(orderLive);
 
 const TOTAL_ORACLES = 76;
 const LIVE_COUNT = liveOracles.length;
@@ -98,6 +109,27 @@ const steps = [
         )}
       </div>
     </section>
+
+    <!-- ═══ ARCHIVE ═══ -->
+    {archiveOracles.length > 0 && (
+      <section id="archive" class="pb-14 sm:pb-20 px-4">
+        <div class="max-w-6xl mx-auto">
+          <details class="reveal">
+            <summary class="cursor-pointer select-none mb-2 list-none">
+              <span class="text-lg font-semibold text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">
+                Archive &middot; {archiveOracles.length}
+              </span>
+              <span class="ml-2 text-xs text-[var(--theme-text-muted)]">— early experiments &amp; non-Oracle pages</span>
+            </summary>
+            <div class="gallery-layout mt-4 opacity-70">
+              {archiveOracles.map((o) => (
+                <GalleryCard oracle={o.data} />
+              ))}
+            </div>
+          </details>
+        </div>
+      </section>
+    )}
 
     <!-- ═══ THE GAP ═══ -->
     <section id="the-gap" class="section-border py-14 sm:py-20 px-4">

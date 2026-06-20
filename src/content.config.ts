@@ -13,7 +13,9 @@ const oracles = defineCollection({
     background: z.string(),
     stack: z.array(z.string()).optional(),
     screenshot: z.string().optional(),
-    status: z.enum(["live", "known"]),
+    status: z.enum(["live", "known", "archive"]),
+    pinned: z.boolean().optional(),
+    added: z.string().optional(),
   }),
 });
 
