@@ -19,7 +19,7 @@ const registryPath = join(root, "deployments", "registry.json");
 const registry = JSON.parse(readFileSync(registryPath, "utf8"));
 
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || "a5eabdc2b11aae9bd5af46bd6a88179e";
-const TODAY = new Date().toISOString().slice(0, 10);
+const TODAY = new Date().toLocaleDateString("en-CA");
 const WORK = "/tmp/redeploy";
 mkdirSync(WORK, { recursive: true });
 
