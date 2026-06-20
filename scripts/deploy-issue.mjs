@@ -38,28 +38,41 @@ try {
   body = j.body || ""; title = j.title || "";
 } catch (e) { done({ issue: issueNum, ok: false, skip: "issue-fetch-failed" }); }
 
-// 2. Parse source repo (first github.com/owner/name that isn't Oracle-Landing/buildwithoracle)
+// Load registry early so we can recognize redeploy-notices for existing Oracles.
+const registryPath = join(root, "deployments", "registry.json");
+const registry = JSON.parse(readFileSync(registryPath, "utf8"));
+
+// 2. Parse source repo: prefer a github.com/owner/name URL; else fall back to any
+//    known registry source mentioned in the body (e.g. `owner/repo` in backticks).
 const repoMatches = [...body.matchAll(/github\.com\/([\w.-]+)\/([\w.-]+?)(?:[)\s.#]|$)/g)]
   .map((m) => `${m[1]}/${m[2]}`.replace(/\.git$/, ""))
   .filter((r) => !/^Oracle-Landing\//i.test(r) && !/buildwithoracle/i.test(r) && !/\/(issues|discussions|pull)$/i.test(r));
-const source = repoMatches[0];
+let source = repoMatches[0];
+if (!source) {
+  const known = registry.deployments.find((d) => body.includes(d.source));
+  if (known) source = known.source;
+}
 if (!source) done({ issue: issueNum, ok: false, skip: "no-source-repo" });
 
-// 3. Parse requested subdomain (first *.buildwithoracle.com, ignore gallery/landing)
-const subs = [...body.matchAll(/\b([a-z0-9][a-z0-9-]*)\.buildwithoracle\.com/gi)]
-  .map((m) => m[1].toLowerCase())
-  .filter((s) => !["gallery", "landing", "www"].includes(s));
-const sub = [...new Set(subs)][0];
-if (!sub) done({ issue: issueNum, ok: false, skip: "no-subdomain" });
-const altSub = [...new Set(subs)][1]; // optional secondary domain
-const domains = [`${sub}.buildwithoracle.com`, ...(altSub ? [`${altSub}.buildwithoracle.com`] : [])];
+// Is this an already-deployed Oracle? (redeploy-notice case)
+const existing = registry.deployments.find((d) => d.source === source);
 
-// 4. Verify repo accessible + default branch
+// 3. Parse subdomain(s); else fall back to the existing Oracle's domain(s).
+const subs = [...new Set(
+  [...body.matchAll(/\b([a-z0-9][a-z0-9-]*)\.buildwithoracle\.com/gi)]
+    .map((m) => m[1].toLowerCase())
+    .filter((s) => !["gallery", "landing", "www"].includes(s))
+)];
+let domains = subs.map((s) => `${s}.buildwithoracle.com`);
+if (domains.length === 0 && existing) domains = [existing.domain, ...(existing.alt_domains || [])];
+if (domains.length === 0) done({ issue: issueNum, ok: false, skip: "no-subdomain", source });
+
+// 4. Verify repo accessible + branch (reuse existing branch for known Oracles)
 let branch;
 try {
   const j = JSON.parse(sh(`gh repo view ${source} --json visibility,defaultBranchRef`));
   if (j.visibility !== "PUBLIC") done({ issue: issueNum, ok: false, skip: "repo-not-public", source });
-  branch = j.defaultBranchRef?.name || "main";
+  branch = existing?.branch || j.defaultBranchRef?.name || "main";
 } catch (e) { done({ issue: issueNum, ok: false, skip: "repo-not-accessible", source }); }
 
 // 5. Parse identity for the gallery card
@@ -67,17 +80,18 @@ const hexes = [...body.matchAll(/#[0-9a-fA-F]{6}\b/g)].map((m) => m[0]);
 const primary = hexes[0] || "#6366f1";
 const secondary = hexes[1] || "#22d3ee";
 const background = hexes[2] || "#0a0a14";
-let name = (title || sub)
+const firstSub = domains[0].split(".")[0];
+let name = (title || firstSub)
   .replace(/^[^A-Za-z฀-๿0-9]+/, "")
-  .replace(/\b(register|deploy|request|landing\s*page|oracle\s*landing\s*page)\b/gi, "")
+  .replace(/\b(register|deploy|redeploy|request|landing\s*page|oracle\s*landing\s*page)\b/gi, "")
   .replace(/[—:|].*$/, "")
   .replace(/buildwithoracle\.com/gi, "")
-  .trim() || sub;
+  .trim() || firstSub;
 const numMatch = body.match(/(?:number|#)\s*[:#]?\s*(\d{1,4})\b/i);
 const number = numMatch ? numMatch[1] : null;
-const fork = source.split("/")[1].replace(/\.git$/, "");
-const worker = fork;
-const slug = sub.replace(/[^a-z0-9-]/g, "");
+const fork = existing ? existing.fork.split("/").pop() : source.split("/")[1].replace(/\.git$/, "");
+const worker = existing ? existing.worker : fork;
+const slug = existing ? existing.oracle : firstSub.replace(/[^a-z0-9-]/g, "");
 
 // 6. Fork + clone (idempotent)
 mkdirSync(WORK, { recursive: true });
@@ -147,9 +161,7 @@ if (!existsSync(galleryPath)) {
   writeFileSync(galleryPath, fm);
 }
 
-// 10. Registry entry (append if not present)
-const registryPath = join(root, "deployments", "registry.json");
-const registry = JSON.parse(readFileSync(registryPath, "utf8"));
+// 10. Registry entry (append if not present; already loaded above)
 if (!registry.deployments.some((d) => d.oracle === slug)) {
   registry.deployments.push({
     oracle: slug, domain: domains[0], ...(domains[1] ? { alt_domains: [domains[1]] } : {}),

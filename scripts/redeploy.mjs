@@ -46,21 +46,34 @@ function writeStaticWrangler(dir, worker, domains) {
   }
 }
 
-function writeMac1Wrangler(dir, worker, domains) {
-  const cfg = {
-    $schema: "./node_modules/wrangler/config-schema.json",
-    compatibility_date: "2026-06-20",
-    compatibility_flags: ["global_fetch_strictly_public"],
-    name: worker,
-    main: "@astrojs/cloudflare/entrypoints/server",
-    routes: domains.map((d) => ({ pattern: d, custom_domain: true })),
-    assets: { directory: "./dist/client", binding: "ASSETS" },
-    observability: { enabled: true },
-  };
-  writeFileSync(join(dir, "wrangler.jsonc"), JSON.stringify(cfg, null, 2));
-  for (const f of ["wrangler.toml", "wrangler.json"]) {
+// SSR repos declare a worker entry (`main`). For those we KEEP the repo's own
+// wrangler (it carries bindings/secrets/assets layout) and only ensure a
+// custom_domain route — never overwrite with a static config (that drops /api).
+function wranglerPath(dir) {
+  for (const f of ["wrangler.toml", "wrangler.jsonc", "wrangler.json"]) {
     const p = join(dir, f);
-    if (existsSync(p)) rmSync(p);
+    if (existsSync(p)) return p;
+  }
+  return null;
+}
+function isSSR(dir) {
+  const p = wranglerPath(dir);
+  if (!p) return false;
+  const c = readFileSync(p, "utf8").replace(/(^|\s)\/\/.*$/gm, "");
+  return /(^|\n)\s*"?main"?\s*[:=]/.test(c);
+}
+function ensureSSRRoute(dir, domains) {
+  const p = wranglerPath(dir);
+  if (!p) return;
+  let c = readFileSync(p, "utf8");
+  if (/custom_domain/.test(c)) return; // already routed
+  if (p.endsWith(".toml")) {
+    for (const d of domains) c += `\n[[routes]]\npattern = "${d}"\ncustom_domain = true\n`;
+    writeFileSync(p, c);
+  } else {
+    const cfg = JSON.parse(c.replace(/(^|\s)\/\/.*$/gm, ""));
+    cfg.routes = [...(cfg.routes || []), ...domains.map((d) => ({ pattern: d, custom_domain: true }))];
+    writeFileSync(p, JSON.stringify(cfg, null, 2));
   }
 }
 
@@ -85,11 +98,24 @@ for (const d of registry.deployments) {
     if (!existsSync(join(dir, "dist"))) throw new Error("no dist after build");
 
     const domains = [d.domain, ...(d.alt_domains || [])];
-    if (d.oracle === "mac1") writeMac1Wrangler(dir, d.worker, domains);
-    else writeStaticWrangler(dir, d.worker, domains);
+    const ssr = isSSR(dir);
+    if (ssr) {
+      ensureSSRRoute(dir, domains); // keep repo's own worker config (bindings/secrets)
+    } else {
+      writeStaticWrangler(dir, d.worker, domains);
+      if (existsSync(join(dir, "dist", "_worker.js"))) {
+        writeFileSync(join(dir, "dist", ".assetsignore"), "_worker.js\n_routes.json\n");
+      }
+    }
 
-    if (existsSync(join(dir, "dist", "_worker.js"))) {
-      writeFileSync(join(dir, "dist", ".assetsignore"), "_worker.js\n_routes.json\n");
+    // Secret-scan the build output before publishing; abort this Oracle if dirty.
+    try {
+      sh(`node ${join(__dirname, "scan-secrets.mjs")} ${join(dir, "dist")}`);
+    } catch (scanErr) {
+      const hits = (scanErr.stdout || "").toString().split("\n").slice(0, 6).join(" ");
+      results.push({ oracle: d.oracle, status: "FAIL", error: `secret-scan: ${hits}` });
+      process.stdout.write(`FAIL ${d.oracle}: secret-scan flagged — NOT deployed\n`);
+      continue;
     }
 
     const out = sh(`npx wrangler deploy`, dir);
