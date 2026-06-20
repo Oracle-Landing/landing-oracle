@@ -20,7 +20,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, "..");
 const REPO = "Oracle-Landing/landing-oracle";
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || "a5eabdc2b11aae9bd5af46bd6a88179e";
-const TODAY = "2026-06-20";
+const TODAY = new Date().toISOString().slice(0, 10);
 const WORK = "/tmp/landing-deploys";
 
 const issueNum = process.argv[2];

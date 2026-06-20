@@ -19,6 +19,7 @@ const registryPath = join(root, "deployments", "registry.json");
 const registry = JSON.parse(readFileSync(registryPath, "utf8"));
 
 const ACCOUNT = process.env.CLOUDFLARE_ACCOUNT_ID || "a5eabdc2b11aae9bd5af46bd6a88179e";
+const TODAY = new Date().toISOString().slice(0, 10);
 const WORK = "/tmp/redeploy";
 mkdirSync(WORK, { recursive: true });
 
@@ -94,7 +95,7 @@ for (const d of registry.deployments) {
     const out = sh(`npx wrangler deploy`, dir);
     const url = (out.match(/https:\/\/[a-z0-9-]+\.workers\.dev/) || [""])[0];
     d.deployed_commit = newSha;
-    d.deployed_at = "2026-06-20";
+    d.deployed_at = TODAY;
     results.push({ oracle: d.oracle, status: "OK", sha: newSha.slice(0, 7), url, domain: d.domain });
     process.stdout.write(`OK ${d.oracle} -> ${newSha.slice(0, 7)} ${url}\n`);
   } catch (e) {
@@ -104,7 +105,7 @@ for (const d of registry.deployments) {
   }
 }
 
-registry.updated = "2026-06-20";
+registry.updated = TODAY;
 writeFileSync(registryPath, JSON.stringify(registry, null, 2) + "\n");
 
 process.stdout.write(`\n===== SUMMARY =====\n`);
