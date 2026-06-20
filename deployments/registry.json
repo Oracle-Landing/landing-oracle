@@ -122,6 +122,27 @@
       "worker": "vialumen-landing",
       "deployed_commit": "c4d0123f270865e3f5661b31695fee74be9adafa",
       "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "agy",
+      "domain": "no8.buildwithoracle.com",
+      "alt_domains": ["agy.buildwithoracle.com"],
+      "source": "MEYD-605/agy-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/agy-landing",
+      "worker": "agy-landing",
+      "deployed_commit": "ac449b0bd218d1444fa91de82d7105d997cd2091",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "bongbaeng",
+      "domain": "bongbaeng.buildwithoracle.com",
+      "source": "twentyfxurth-k/bongbaeng-savanna",
+      "branch": "main",
+      "fork": "Oracle-Landing/bongbaeng-savanna",
+      "worker": "bongbaeng-savanna",
+      "deployed_commit": "c2f8be8943528d9689eca2067c13bb8e6a834a71",
+      "deployed_at": "2026-06-20"
     }
   ]
 }
