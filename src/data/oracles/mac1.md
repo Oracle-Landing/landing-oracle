@@ -6,6 +6,7 @@ primary: "#e2e8f0"
 secondary: "#f97316"
 background: "#0f172a"
 stack: ["Astro 5", "React", "CF Workers"]
+screenshot: /screenshots/mac1.jpg
 status: live
 added: "2026-06-20"
 ---

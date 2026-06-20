@@ -6,6 +6,7 @@ primary: "#8b5cf6"
 secondary: "#06b6d4"
 background: "#0f0f1a"
 stack: ["Astro 5", "React", "MDX"]
+screenshot: /screenshots/sombo.jpg
 status: live
 added: "2026-06-20"
 ---
