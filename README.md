@@ -39,13 +39,13 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
+_15 deployments · **6 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
 | 🔄 | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `cc0ba9c` | `eb6bb1a` | hime-co/chaiklang-landing@main |
 | ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `4e649c7` | `4e649c7` | anupob88/nova-landing@main |
-| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `cc0c57a` | `cc0c57a` | MEYD-605/mac1-landing@mainn |
+| 🔄 | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `cc0c57a` | `2965964` | MEYD-605/mac1-landing@mainn |
 | 🔄 | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `434ec85` | `ecf5484` | namhomp/gon-landing@main |
 | 🔄 | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `dbf321e` | `ac2a530` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
@@ -61,6 +61,7 @@ _15 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 
 
 ### 🔄 Updates available (redeploy)
 - **chaiklang** — hime-co/chaiklang-landing@main moved to `eb6bb1a`: ux: content-first book layout + off-site links last + GitHub Markdown link
+- **mac1** — MEYD-605/mac1-landing@mainn moved to `2965964`: Merge pull request #3 from MEYD-605/feat/mac1-full-text-books
 - **gon** — namhomp/gon-landing@main moved to `ecf5484`: fix: remove dead links, fix blog page styling, anchor principles nav
 - **sombo** — MEYD-605/sombo-landing@main moved to `ac2a530`: Merge pull request #17 from MEYD-605/feature/sombo-html-books
 - **dustboy** — laris-co/dustboy-land@main moved to `f92ed3f`: refactor(books): content-first reading page; external links last
