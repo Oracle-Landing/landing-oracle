@@ -6,9 +6,12 @@ import { getCollection } from "astro:content";
 
 const allOracles = await getCollection("oracles");
 
-// Order: Nat's own (pinned) on top → then newest first (by `added` desc) → undated last
+// Order: Nat's own (pinned) on top → polished (real screenshot) above placeholders
+// → then newest first (by `added` desc) → name. Keeps the good-looking cards up
+// top and groups the plainer/newer ones lower without removing anything.
 const orderLive = (a, b) => {
   if (!!a.data.pinned !== !!b.data.pinned) return a.data.pinned ? -1 : 1;
+  if (!!a.data.screenshot !== !!b.data.screenshot) return a.data.screenshot ? -1 : 1;
   const da = a.data.added ?? "";
   const db = b.data.added ?? "";
   if (da !== db) return db.localeCompare(da);
@@ -86,7 +89,7 @@ const steps = [
         <p id="gallery-empty" class="hidden text-center text-sm text-[var(--theme-text-muted)] py-8">No oracles match your search.</p>
 
         {liveOracles.length > 0 ? (
-          <div class="gallery-layout reveal" id="gallery-grid">
+          <div class="gallery-layout" id="gallery-grid">
             {liveOracles.map((o) => (
               <GalleryCard oracle={o.data} />
             ))}

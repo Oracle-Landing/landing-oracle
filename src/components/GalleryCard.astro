@@ -27,15 +27,29 @@ const { oracle } = Astro.props;
   data-name={oracle.name.toLowerCase()}
   data-stack={oracle.stack?.join(",").toLowerCase() ?? ""}
 >
-  <!-- Screenshot -->
+  <!-- Screenshot (or themed placeholder when none) -->
   <div class="aspect-[16/10] relative" style={`background-color: ${oracle.background}`}>
-    <img
-      src={oracle.screenshot}
-      alt={`${oracle.name} landing page`}
-      loading="lazy"
-      decoding="async"
-      class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-    />
+    {oracle.screenshot ? (
+      <img
+        src={oracle.screenshot}
+        alt={`${oracle.name} landing page`}
+        loading="lazy"
+        decoding="async"
+        class="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+      />
+    ) : (
+      <div
+        class="absolute inset-0 flex items-center justify-center transition-transform duration-700 group-hover:scale-105"
+        style={`background: radial-gradient(120% 120% at 30% 20%, ${oracle.primary}33, transparent 60%), radial-gradient(120% 120% at 80% 90%, ${oracle.secondary}33, transparent 55%), ${oracle.background}`}
+      >
+        <span
+          class="text-2xl sm:text-3xl font-bold tracking-tight drop-shadow"
+          style={`color: ${oracle.primary}`}
+        >
+          {oracle.name}
+        </span>
+      </div>
+    )}
   </div>
 
   <!-- Hover overlay — macOS translucent -->
