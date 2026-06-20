@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **2 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
+_15 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -49,7 +49,7 @@ _15 deployments · **2 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
 | 🔄 | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `a93be91` | `476757c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
-| 🔄 | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `8ea1a42` | `85e1c8f` | laris-co/dustboy-land@main |
+| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `85e1c8f` | `85e1c8f` | laris-co/dustboy-land@main |
 | ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `fdd854e` | `fdd854e` | thebuilderofmoebius9/atom-landing@main |
 | ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `0eaad06` | `0eaad06` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
@@ -61,7 +61,6 @@ _15 deployments · **2 update(s) available** · 0 error(s) · 0 down · updated 
 
 ### 🔄 Updates available (redeploy)
 - **sombo** — MEYD-605/sombo-landing@main moved to `476757c`: Merge pull request #23 from MEYD-605/feat/sombo-full-text-books
-- **dustboy** — laris-co/dustboy-land@main moved to `85e1c8f`: feat: real SIWE login + per-address content
 
 <!-- DEPLOY-STATUS:END -->
 
