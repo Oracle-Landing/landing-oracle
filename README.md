@@ -39,18 +39,18 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **3 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
+_15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
 | ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `4eea9cc` | `4eea9cc` | hime-co/chaiklang-landing@main |
 | ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
-| 🔄 | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `4e2fd5b` | `eb47541` | MEYD-605/mac1-landing@mainn |
+| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `eb47541` | `eb47541` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
-| 🔄 | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `0317fbf` | `959215d` | laris-co/dustboy-land@main |
-| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f298de4` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
+| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `959215d` | `959215d` | laris-co/dustboy-land@main |
+| ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
 | ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `a67e600` | `a67e600` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
@@ -58,11 +58,6 @@ _15 deployments · **3 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `1d73407` | `1d73407` | twentyfxurth-k/bongbaeng-savanna@main |
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `ac34c7f` | `ac34c7f` | Kubotaaaaa/weizen-landing@main |
-
-### 🔄 Updates available (redeploy)
-- **mac1** — MEYD-605/mac1-landing@mainn moved to `eb47541`: Merge pull request #6 from MEYD-605/feat/logo-animation
-- **dustboy** — laris-co/dustboy-land@main moved to `959215d`: feat: animated logo (sensor-pulse gimmick) + raise nav breakpoint to md
-- **atom** — thebuilderofmoebius9/atom-landing@main moved to `f000cb7`: Add Atom Teach Axe lessons 4 and 5
 
 <!-- DEPLOY-STATUS:END -->
 
