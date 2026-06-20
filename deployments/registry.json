@@ -1,0 +1,127 @@
+{
+  "$comment": "Deployment registry — which source repo + commit each live Oracle was deployed from. Used by .github/workflows/check-deploys.yml to detect upstream updates (when an Oracle pushes new commits beyond what we deployed).",
+  "updated": "2026-06-20",
+  "deployments": [
+    {
+      "oracle": "chaiklang",
+      "domain": "chaiklang.buildwithoracle.com",
+      "source": "hime-co/chaiklang-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/chaiklang-landing",
+      "worker": "chaiklang-landing",
+      "deployed_commit": "b1e952ad78b42c6f0b316f31365d982623b1d443",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "nova",
+      "domain": "nova.buildwithoracle.com",
+      "source": "anupob88/nova-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/nova-landing",
+      "worker": "nova-landing",
+      "deployed_commit": "ee9f4f26b3dc180f6d25ed41b74f01a94bc59cd6",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "mac1",
+      "domain": "mac1.buildwithoracle.com",
+      "source": "MEYD-605/mac1-landing",
+      "branch": "mainn",
+      "fork": "Oracle-Landing/mac1-landing",
+      "worker": "mac1-landing",
+      "deployed_commit": "4e2fd5b190b48cf044afe372cc641fb928f5c825",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "gon",
+      "domain": "gon.buildwithoracle.com",
+      "source": "namhomp/gon-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/gon-landing",
+      "worker": "gon-landing",
+      "deployed_commit": "f0eec9f21cfe86ee0e694100068ad2936161942e",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "sombo",
+      "domain": "sombo.buildwithoracle.com",
+      "source": "MEYD-605/sombo-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/sombo-landing",
+      "worker": "sombo-landing",
+      "deployed_commit": "f06e474f3f5b03f73760f5fe90733dc177ff7776",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "no10",
+      "domain": "no10.buildwithoracle.com",
+      "source": "MEYD-605/no10-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/no10-landing",
+      "worker": "no10-landing",
+      "deployed_commit": "449d657faf866308bc2649a468989f43a4668db7",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "dustboy",
+      "domain": "dustboy.buildwithoracle.com",
+      "source": "laris-co/dustboy-land",
+      "branch": "main",
+      "fork": "Oracle-Landing/dustboy-land",
+      "worker": "dustboy-land",
+      "deployed_commit": "0317fbf0621b5fbbc19812384b81f1cf61ae1469",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "atom",
+      "domain": "atom.buildwithoracle.com",
+      "source": "thebuilderofmoebius9/atom-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/atom-landing",
+      "worker": "atom-landing",
+      "deployed_commit": "f298de4d104346b51a1d2c57477d65edb4ca24a7",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "tonk",
+      "domain": "tonk.buildwithoracle.com",
+      "source": "tonkmac/tonk-landing",
+      "branch": "master",
+      "fork": "Oracle-Landing/tonk-landing",
+      "worker": "tonk-landing",
+      "deployed_commit": "fe7265824747d4c716ba52cf8484384b89d49ab8",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "gemini",
+      "domain": "no6.buildwithoracle.com",
+      "alt_domains": ["gemini.buildwithoracle.com"],
+      "source": "MEYD-605/gemini-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/gemini-landing",
+      "worker": "gemini-landing",
+      "deployed_commit": "78ecbd115bc7ec89a222ae2f8aeb8ce177c2c783",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "mali",
+      "domain": "mali.buildwithoracle.com",
+      "source": "phaith/mali-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/mali-landing",
+      "worker": "mali-landing",
+      "deployed_commit": "833b3afb8188956eadce3b3d59645af440c486b8",
+      "deployed_at": "2026-06-20"
+    },
+    {
+      "oracle": "vialumen",
+      "domain": "vialumen.buildwithoracle.com",
+      "source": "tamtidmear-prog/vialumen-landing",
+      "branch": "master",
+      "fork": "Oracle-Landing/vialumen-landing",
+      "worker": "vialumen-landing",
+      "deployed_commit": "c4d0123f270865e3f5661b31695fee74be9adafa",
+      "deployed_at": "2026-06-20"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+name: Check Deploys
+
+# Detect when an Oracle has pushed new commits to their source repo beyond the
+# commit we deployed (deployments/registry.json) — i.e. their site needs a redeploy.
+# Runs daily + on demand + whenever the registry changes.
+
+on:
+  schedule:
+    - cron: "0 1 * * *" # daily 01:00 UTC (08:00 ICT)
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "deployments/registry.json"
+      - "scripts/check-deploys.mjs"
+      - ".github/workflows/check-deploys.yml"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run deploy check
+        id: check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node scripts/check-deploys.mjs --markdown > report.md
+          node scripts/check-deploys.mjs --json > report.json
+          UPDATES=$(node -e "console.log(require('./report.json').summary.updates)")
+          DOWN=$(node -e "console.log(require('./report.json').summary.down)")
+          echo "updates=$UPDATES" >> "$GITHUB_OUTPUT"
+          echo "down=$DOWN" >> "$GITHUB_OUTPUT"
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upsert tracking issue when updates or outages exist
+        if: steps.check.outputs.updates != '0' || steps.check.outputs.down != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="🔄 Landing pages — upstream updates available"
+          BODY_FILE=report.md
+          NUM=$(gh issue list --state open --search "$TITLE in:title" --json number,title \
+                --jq ".[] | select(.title==\"$TITLE\") | .number" | head -1)
+          if [ -n "$NUM" ]; then
+            gh issue edit "$NUM" --body-file "$BODY_FILE"
+            gh issue comment "$NUM" --body "♻️ Refreshed $(date -u +%Y-%m-%dT%H:%MZ) — see updated checklist above."
+            echo "Updated issue #$NUM"
+          else
+            gh issue create --title "$TITLE" --body-file "$BODY_FILE" --label "deploy-check" 2>/dev/null \
+              || gh issue create --title "$TITLE" --body-file "$BODY_FILE"
+            echo "Created tracking issue"
+          fi
