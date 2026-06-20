@@ -9,7 +9,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/chaiklang-landing",
       "worker": "chaiklang-landing",
-      "deployed_commit": "cc0ba9c3eec0d79278b23002c058aed756ef0125",
+      "deployed_commit": "eb6bb1abef509a7e26ced93cc054fb35bf99e43f",
       "deployed_at": "2026-06-20"
     },
     {
@@ -19,7 +19,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/nova-landing",
       "worker": "nova-landing",
-      "deployed_commit": "4e649c7932892d5c0202bcdfb7c5fca6beb99bb2",
+      "deployed_commit": "ab62d347aa97f21425d77e6afa49330da058d19e",
       "deployed_at": "2026-06-20"
     },
     {
@@ -29,7 +29,7 @@
       "branch": "mainn",
       "fork": "Oracle-Landing/mac1-landing",
       "worker": "mac1-landing",
-      "deployed_commit": "cc0c57ac134275eb7cd924d37f9b3bdd70a073f2",
+      "deployed_commit": "2965964c5f5a4f2db50dd53489808b03f540f2f5",
       "deployed_at": "2026-06-20"
     },
     {
@@ -39,7 +39,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/gon-landing",
       "worker": "gon-landing",
-      "deployed_commit": "434ec85732e738a30c2d5922f8afad48df6da5d5",
+      "deployed_commit": "ecf5484286dca3b93080456a4484fe6ba994de40",
       "deployed_at": "2026-06-20"
     },
     {
@@ -49,7 +49,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/sombo-landing",
       "worker": "sombo-landing",
-      "deployed_commit": "dbf321eacfb0ed0e7cc75ffe2a7254790239cc22",
+      "deployed_commit": "a93be91a3c6b8b73ffface0e62ec86567b2b3a5d",
       "deployed_at": "2026-06-20"
     },
     {
@@ -69,7 +69,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/dustboy-land",
       "worker": "dustboy-land",
-      "deployed_commit": "78b10649d6ebd78e707faf8ab6236e7b13cfcab3",
+      "deployed_commit": "3f0242527b7f5d0fb8b80d8534cc9732a7213614",
       "deployed_at": "2026-06-20"
     },
     {
@@ -79,7 +79,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/atom-landing",
       "worker": "atom-landing",
-      "deployed_commit": "6e49595ec4636813d92bb240623b211d7b068566",
+      "deployed_commit": "1f03be6b04ac5b35c33d6e8ff0c8c9effe09703f",
       "deployed_at": "2026-06-20"
     },
     {
@@ -89,7 +89,7 @@
       "branch": "master",
       "fork": "Oracle-Landing/tonk-landing",
       "worker": "tonk-landing",
-      "deployed_commit": "5b2f57285e70fd7152ce0be6d49ccedf96245d6d",
+      "deployed_commit": "762af571f3f2c11f6d78849ae8cb52b751b49944",
       "deployed_at": "2026-06-20"
     },
     {
