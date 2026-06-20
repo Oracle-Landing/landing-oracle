@@ -14,3 +14,8 @@ node_modules/
 # Environment
 .env
 .env.*
+
+# Local-only tooling (installed per-checkout, not vendored)
+.claude/skills/impeccable/
+.claude/settings.local.json
+.rtk/
