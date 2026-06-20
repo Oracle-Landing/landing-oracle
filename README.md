@@ -39,11 +39,11 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
+_15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
-| 🔄 | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `b46acbc` | `20c93e9` | hime-co/chaiklang-landing@main |
+| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `20c93e9` | `20c93e9` | hime-co/chaiklang-landing@main |
 | ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
 | ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `eb47541` | `eb47541` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
@@ -58,9 +58,6 @@ _15 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `80b76c7` | `80b76c7` | twentyfxurth-k/bongbaeng-savanna@main |
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `b86451e` | `b86451e` | Kubotaaaaa/weizen-landing@main |
-
-### 🔄 Updates available (redeploy)
-- **chaiklang** — hime-co/chaiklang-landing@main moved to `20c93e9`: redesign: info hierarchy (story-first) + book teasers + SVG gimmick
 
 <!-- DEPLOY-STATUS:END -->
 
