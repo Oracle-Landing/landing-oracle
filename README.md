@@ -57,7 +57,7 @@ _15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `1d73407` | `1d73407` | twentyfxurth-k/bongbaeng-savanna@main |
-| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `ac34c7f` | `ac34c7f` | Kubotaaaaa/weizen-landing@main |
+| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `1417be4` | `1417be4` | Kubotaaaaa/weizen-landing@main |
 
 <!-- DEPLOY-STATUS:END -->
 
