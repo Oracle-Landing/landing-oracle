@@ -18,7 +18,7 @@ STALE=$(node scripts/check-deploys.mjs --json 2>/dev/null \
   | node -e "const d=JSON.parse(require('fs').readFileSync(0));process.stdout.write(d.rows.filter(r=>r.state==='update-available').map(r=>r.oracle).join(','))")
 if [ -n "$STALE" ]; then
   node scripts/redeploy.mjs --only "$STALE" >/tmp/loop-tick-redeploy.log 2>&1
-  OKN=$(grep -cE '^OK +[a-z]' /tmp/loop-tick-redeploy.log)
+  OKN=$(grep -cE '^OK +[a-z][a-z0-9-]* -> ' /tmp/loop-tick-redeploy.log)
   SUMMARY="${SUMMARY}redeployed stale: ${STALE} (${OKN} ok)\n"
 else
   SUMMARY="${SUMMARY}stale: none (all current)\n"
