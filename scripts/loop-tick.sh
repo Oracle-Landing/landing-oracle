@@ -25,8 +25,9 @@ else
 fi
 
 # 2. Auto-deploy new issues ----------------------------------------------------
+# Skip: #10 workshop hub, #35 tracker, #44 dustboy manual tracker (pending owner PR merge + SESSION_SECRET)
 NEW=$(gh issue list --repo Oracle-Landing/landing-oracle --state open --limit 100 --json number \
-  --jq '.[].number | select(. != 10 and . != 35)')
+  --jq '.[].number | select(. != 10 and . != 35 and . != 44)')
 DEPLOYED_NEW=""
 for n in $NEW; do
   RES=$(node scripts/deploy-issue.mjs "$n" 2>/tmp/loop-tick-issue-$n.err)
