@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **4 update(s) available** · 0 error(s) · 2 down · updated 2026-06-20_
+_15 deployments · **4 update(s) available** · 0 error(s) · 0 down · updated 2026-06-20_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -55,9 +55,9 @@ _15 deployments · **4 update(s) available** · 0 error(s) · 2 down · updated 
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `2e6bb2f` | `2e6bb2f` | tamtidmear-prog/vialumen-landing@master |
-| 🔴 | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
+| ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `13928d5` | `13928d5` | twentyfxurth-k/bongbaeng-savanna@main |
-| 🔴 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `88cb5d0` | `88cb5d0` | Kubotaaaaa/weizen-landing@main |
+| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `88cb5d0` | `88cb5d0` | Kubotaaaaa/weizen-landing@main |
 
 ### 🔄 Updates available (redeploy)
 - **chaiklang** — hime-co/chaiklang-landing@main moved to `cc0ba9c`: feat: books as HTML (SEO/AEO) + AEO/GEO infra + siblings + sanitized PDFs
