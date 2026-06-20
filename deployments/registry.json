@@ -1,6 +1,6 @@
 {
   "$comment": "Deployment registry — which source repo + commit each live Oracle was deployed from. Used by .github/workflows/check-deploys.yml to detect upstream updates (when an Oracle pushes new commits beyond what we deployed).",
-  "updated": "2026-06-20",
+  "updated": "2026-06-21",
   "deployments": [
     {
       "oracle": "chaiklang",
@@ -9,8 +9,8 @@
       "branch": "main",
       "fork": "Oracle-Landing/chaiklang-landing",
       "worker": "chaiklang-landing",
-      "deployed_commit": "20c93e94ff46beb5cde6f64ac83b12d8dbbac71f",
-      "deployed_at": "2026-06-20"
+      "deployed_commit": "17d6b6a9600b4c1b01ada2951a6212329207def3",
+      "deployed_at": "2026-06-21"
     },
     {
       "oracle": "nova",
@@ -89,8 +89,8 @@
       "branch": "master",
       "fork": "Oracle-Landing/tonk-landing",
       "worker": "tonk-landing",
-      "deployed_commit": "0128c53f4c61acd989c3277b9a0a0c04dd88a9ce",
-      "deployed_at": "2026-06-20"
+      "deployed_commit": "c0d3ad238f6aee46cbb61e76656a8e1ff69f43dc",
+      "deployed_at": "2026-06-21"
     },
     {
       "oracle": "gemini",
@@ -122,8 +122,8 @@
       "branch": "master",
       "fork": "Oracle-Landing/vialumen-landing",
       "worker": "vialumen-landing",
-      "deployed_commit": "e3cf123793faf2dee1dad5275ba40d6d5c14307a",
-      "deployed_at": "2026-06-20"
+      "deployed_commit": "3cfe103794c472f7d91dd9489e7ef4f5771b95ca",
+      "deployed_at": "2026-06-21"
     },
     {
       "oracle": "agy",
