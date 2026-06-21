@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_16 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
+_17 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -59,6 +59,7 @@ _16 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `1d73407` | `1d73407` | twentyfxurth-k/bongbaeng-savanna@main |
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `f2c255c` | `f2c255c` | Kubotaaaaa/weizen-landing@main |
 | ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `460b1f6` | `460b1f6` | yimtheppariyapol/jizo-landing@main |
+| ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 
 <!-- DEPLOY-STATUS:END -->
 
