@@ -87,7 +87,13 @@ for (const d of registry.deployments) {
   process.stdout.write(`\n=== ${d.oracle} (${d.source}@${d.branch}) ===\n`);
   try {
     rmSync(dir, { recursive: true, force: true });
-    sh(`git clone --depth 1 -b ${d.branch} https://github.com/${d.source}.git ${dir}`);
+    try {
+      sh(`git clone --depth 1 -b ${d.branch} https://github.com/${d.source}.git ${dir}`);
+    } catch (cloneErr) {
+      // transient "initial ref transaction" / leftover-dir errors: clear + retry once
+      rmSync(dir, { recursive: true, force: true });
+      sh(`git clone --depth 1 -b ${d.branch} https://github.com/${d.source}.git ${dir}`);
+    }
     const newSha = sh(`git rev-parse HEAD`, dir).trim();
 
     const pm = pkgManager(dir);
