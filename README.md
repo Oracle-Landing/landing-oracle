@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
+_16 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -58,6 +58,7 @@ _15 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `1d73407` | `1d73407` | twentyfxurth-k/bongbaeng-savanna@main |
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `1417be4` | `1417be4` | Kubotaaaaa/weizen-landing@main |
+| ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `f10c07e` | `f10c07e` | yimtheppariyapol/jizo-landing@main |
 
 <!-- DEPLOY-STATUS:END -->
 
