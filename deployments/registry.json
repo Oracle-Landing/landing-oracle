@@ -167,6 +167,16 @@
       "worker": "jizo-landing",
       "deployed_commit": "460b1f66592862f06f3a7380358019dc029d2b5e",
       "deployed_at": "2026-06-21"
+    },
+    {
+      "oracle": "tokyo",
+      "domain": "tokyo.buildwithoracle.com",
+      "source": "gon2018/tokyo-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/tokyo-landing",
+      "worker": "tokyo-landing",
+      "deployed_commit": "c0c2cf4b332786223e884e591d1dbeee96fbce40",
+      "deployed_at": "2026-06-21"
     }
   ]
 }
