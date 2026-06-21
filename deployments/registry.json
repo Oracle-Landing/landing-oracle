@@ -157,6 +157,16 @@
       "worker": "weizen-landing",
       "deployed_commit": "1417be4dfddf00851613c4bff413af29b2801504",
       "deployed_at": "2026-06-21"
+    },
+    {
+      "oracle": "jizo",
+      "domain": "jizo.buildwithoracle.com",
+      "source": "yimtheppariyapol/jizo-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/jizo-landing",
+      "worker": "jizo-landing",
+      "deployed_commit": "f10c07e7d439ac1f781bdefcedcfdbfbec832e81",
+      "deployed_at": "2026-06-21"
     }
   ]
 }

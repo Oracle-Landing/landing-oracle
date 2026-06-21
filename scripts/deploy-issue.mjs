@@ -49,6 +49,12 @@ const repoMatches = [...body.matchAll(/github\.com\/([\w.-]+)\/([\w.-]+?)(?:[)\s
   .filter((r) => !/^Oracle-Landing\//i.test(r) && !/buildwithoracle/i.test(r) && !/\/(issues|discussions|pull)$/i.test(r));
 let source = repoMatches[0];
 if (!source) {
+  // Labeled "source: owner/repo" / "repo: owner/repo" (backticks/markdown ok) —
+  // common when the issue uses shorthand instead of a full github.com URL.
+  const lbl = body.match(/(?:^|\n)\s*[*_>\s]*(?:source|repo(?:sitory)?)[*_\s]*[:=][*_\s]*`?([A-Za-z0-9][\w.-]*\/[\w.-]+)`?/i);
+  if (lbl && !/^Oracle-Landing\//i.test(lbl[1]) && !/buildwithoracle/i.test(lbl[1])) source = lbl[1].replace(/\.git$/, "");
+}
+if (!source) {
   const known = registry.deployments.find((d) => body.includes(d.source));
   if (known) source = known.source;
 }
@@ -97,7 +103,8 @@ const firstSub = domains[0].split(".")[0];
 let name = (title || firstSub)
   .replace(/^[^A-Za-z฀-๿0-9]+/, "")
   .replace(/\b(register|deploy|redeploy|request|landing\s*page|oracle\s*landing\s*page)\b/gi, "")
-  .replace(/[—:|].*$/, "")
+  .replace(/\s*(?:[—:|→]|->|=>).*$/, "")
+  .replace(/\b[a-z0-9-]+\.buildwithoracle\.com\b/gi, "")
   .replace(/buildwithoracle\.com/gi, "")
   .trim() || firstSub;
 const numMatch = body.match(/(?:number|#)\s*[:#]?\s*(\d{1,4})\b/i);
