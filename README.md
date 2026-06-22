@@ -39,27 +39,30 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_17 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-21_
+_17 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 2026-06-22_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
-| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `4eea9cc` | `4eea9cc` | hime-co/chaiklang-landing@main |
+| 🔄 | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `4eea9cc` | `528a10c` | hime-co/chaiklang-landing@main |
 | ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
-| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `eb47541` | `eb47541` | MEYD-605/mac1-landing@mainn |
+| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `4d7d5c8` | `4d7d5c8` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
 | ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
-| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `a67e600` | `a67e600` | tonkmac/tonk-landing@master |
+| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `6e1dca8` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
-| ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `1d73407` | `1d73407` | twentyfxurth-k/bongbaeng-savanna@main |
-| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `f2c255c` | `f2c255c` | Kubotaaaaa/weizen-landing@main |
+| ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `6c54fb8` | twentyfxurth-k/bongbaeng-savanna@main |
+| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `dea53e4` | `dea53e4` | Kubotaaaaa/weizen-landing@main |
 | ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `890f4ea` | `890f4ea` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
+
+### 🔄 Updates available (redeploy)
+- **chaiklang** — hime-co/chaiklang-landing@main moved to `528a10c`: blog: keyless P2P — SIWE + Merkle + on-chain root (OracleACL)
 
 <!-- DEPLOY-STATUS:END -->
 
