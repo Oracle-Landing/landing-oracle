@@ -1,6 +1,6 @@
 {
   "$comment": "Deployment registry — which source repo + commit each live Oracle was deployed from. Used by .github/workflows/check-deploys.yml to detect upstream updates (when an Oracle pushes new commits beyond what we deployed).",
-  "updated": "2026-06-22",
+  "updated": "2026-06-23",
   "deployments": [
     {
       "oracle": "chaiklang",
