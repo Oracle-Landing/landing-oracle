@@ -155,8 +155,8 @@
       "branch": "main",
       "fork": "Oracle-Landing/weizen-landing",
       "worker": "weizen-landing",
-      "deployed_commit": "dea53e48a67da57fef1921020086c7a50f38e523",
-      "deployed_at": "2026-06-22"
+      "deployed_commit": "08f613640e044d736f342e171903537a9e7731f3",
+      "deployed_at": "2026-06-23"
     },
     {
       "oracle": "jizo",
