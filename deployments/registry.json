@@ -177,6 +177,16 @@
       "worker": "tokyo-landing",
       "deployed_commit": "c0c2cf4b332786223e884e591d1dbeee96fbce40",
       "deployed_at": "2026-06-21"
+    },
+    {
+      "oracle": "vessel",
+      "domain": "vessel.buildwithoracle.com",
+      "source": "wvweeratouch/vessel-landing",
+      "branch": "main",
+      "fork": "Oracle-Landing/vessel-landing",
+      "worker": "vessel-landing",
+      "deployed_commit": "6e760eef5f20a8e606c3101d64390ac6f3386747",
+      "deployed_at": "2026-06-22"
     }
   ]
 }
