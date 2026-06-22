@@ -1,6 +1,6 @@
 {
   "$comment": "Deployment registry — which source repo + commit each live Oracle was deployed from. Used by .github/workflows/check-deploys.yml to detect upstream updates (when an Oracle pushes new commits beyond what we deployed).",
-  "updated": "2026-06-21",
+  "updated": "2026-06-22",
   "deployments": [
     {
       "oracle": "chaiklang",
@@ -29,8 +29,8 @@
       "branch": "mainn",
       "fork": "Oracle-Landing/mac1-landing",
       "worker": "mac1-landing",
-      "deployed_commit": "eb475413156ef5c631b071897542fa54e5568dc0",
-      "deployed_at": "2026-06-21"
+      "deployed_commit": "4d7d5c86607b846a8fc202cb843bfefb361e981d",
+      "deployed_at": "2026-06-22"
     },
     {
       "oracle": "gon",
@@ -89,8 +89,8 @@
       "branch": "master",
       "fork": "Oracle-Landing/tonk-landing",
       "worker": "tonk-landing",
-      "deployed_commit": "a67e600606aae3e18506b1de9a86112e80cae079",
-      "deployed_at": "2026-06-21"
+      "deployed_commit": "6e1dca83b7be016bd98a1aa06959ce9637a74310",
+      "deployed_at": "2026-06-22"
     },
     {
       "oracle": "gemini",
@@ -145,8 +145,8 @@
       "branch": "main",
       "fork": "Oracle-Landing/bongbaeng-savanna",
       "worker": "bongbaeng-savanna",
-      "deployed_commit": "1d73407f321edb5872665aa1283e2357a21e9b6d",
-      "deployed_at": "2026-06-21"
+      "deployed_commit": "6c54fb81e3cb13f173d438f9ec66c04f24deb9c0",
+      "deployed_at": "2026-06-22"
     },
     {
       "oracle": "weizen",
@@ -155,8 +155,8 @@
       "branch": "main",
       "fork": "Oracle-Landing/weizen-landing",
       "worker": "weizen-landing",
-      "deployed_commit": "f2c255c11d0280e3638d50cf496e1457866c151d",
-      "deployed_at": "2026-06-21"
+      "deployed_commit": "dea53e48a67da57fef1921020086c7a50f38e523",
+      "deployed_at": "2026-06-22"
     },
     {
       "oracle": "jizo",
