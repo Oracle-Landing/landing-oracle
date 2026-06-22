@@ -113,15 +113,16 @@ const fork = existing ? existing.fork.split("/").pop() : source.split("/")[1].re
 const worker = existing ? existing.worker : fork;
 const slug = existing ? existing.oracle : firstSub.replace(/[^a-z0-9-]/g, "");
 
-// 6. Fork + clone (idempotent)
+// 6. Clone UPSTREAM source directly (build+deploy from it — avoids the fork-
+//    propagation race where a freshly-created fork isn't populated yet). The fork
+//    is still created in the background for archival ("Nothing is Deleted").
 mkdirSync(WORK, { recursive: true });
 const dir = join(WORK, fork);
 try {
   try { sh(`gh repo fork ${source} --org Oracle-Landing --clone=false --fork-name ${fork}`); } catch {}
-  sh(`sleep 3`, { shell: "/bin/bash" });
   if (existsSync(dir)) rmSync(dir, { recursive: true, force: true });
-  sh(`gh repo clone Oracle-Landing/${fork} ${dir} -- -q`);
-} catch (e) { done({ issue: issueNum, ok: false, skip: "fork-clone-failed", source }); }
+  sh(`git clone --depth 1 -b ${branch} https://github.com/${source}.git ${dir}`);
+} catch (e) { done({ issue: issueNum, ok: false, skip: "clone-failed", source }); }
 
 // 7. Build (bun if package.json; static-html otherwise)
 let deployDir = "dist";
