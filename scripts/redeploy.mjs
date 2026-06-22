@@ -8,7 +8,7 @@
 // mac1 is SSR (@astrojs/cloudflare server entry); everything else deploys as
 // static Cloudflare Workers assets.
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync } from "node:fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, rmSync, renameSync } from "node:fs";
 import { execSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -86,12 +86,16 @@ for (const d of registry.deployments) {
   const dir = join(WORK, d.oracle);
   process.stdout.write(`\n=== ${d.oracle} (${d.source}@${d.branch}) ===\n`);
   try {
-    rmSync(dir, { recursive: true, force: true });
+    // Ensure a truly empty clone target. rmSync can fail to clear a locked
+    // .wrangler/.git file ("File exists"/"could not create work tree dir"); if the
+    // dir survives, rename it aside (always succeeds) so the clone gets a clean path.
+    try { rmSync(dir, { recursive: true, force: true }); } catch {}
+    if (existsSync(dir)) { try { renameSync(dir, `${dir}.stuck-${Date.now()}`); } catch {} }
     try {
       sh(`git clone --depth 1 -b ${d.branch} https://github.com/${d.source}.git ${dir}`);
     } catch (cloneErr) {
-      // transient "initial ref transaction" / leftover-dir errors: clear + retry once
-      rmSync(dir, { recursive: true, force: true });
+      try { rmSync(dir, { recursive: true, force: true }); } catch {}
+      if (existsSync(dir)) { try { renameSync(dir, `${dir}.stuck-${Date.now()}`); } catch {} }
       sh(`git clone --depth 1 -b ${d.branch} https://github.com/${d.source}.git ${dir}`);
     }
     const newSha = sh(`git rev-parse HEAD`, dir).trim();
