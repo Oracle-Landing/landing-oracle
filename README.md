@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_17 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-22_
+_18 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-22_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -60,6 +60,7 @@ _17 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `dea53e4` | `dea53e4` | Kubotaaaaa/weizen-landing@main |
 | ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `890f4ea` | `890f4ea` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
+| ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
 
 <!-- DEPLOY-STATUS:END -->
 
