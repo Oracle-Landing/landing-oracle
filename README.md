@@ -39,11 +39,11 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_17 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 2026-06-22_
+_17 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-22_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
-| 🔄 | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `4eea9cc` | `528a10c` | hime-co/chaiklang-landing@main |
+| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `528a10c` | `528a10c` | hime-co/chaiklang-landing@main |
 | ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
 | ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `4d7d5c8` | `4d7d5c8` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
@@ -60,9 +60,6 @@ _17 deployments · **1 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `dea53e4` | `dea53e4` | Kubotaaaaa/weizen-landing@main |
 | ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `890f4ea` | `890f4ea` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
-
-### 🔄 Updates available (redeploy)
-- **chaiklang** — hime-co/chaiklang-landing@main moved to `528a10c`: blog: keyless P2P — SIWE + Merkle + on-chain root (OracleACL)
 
 <!-- DEPLOY-STATUS:END -->
 
