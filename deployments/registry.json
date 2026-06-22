@@ -9,8 +9,8 @@
       "branch": "main",
       "fork": "Oracle-Landing/chaiklang-landing",
       "worker": "chaiklang-landing",
-      "deployed_commit": "4eea9cc6247d6c3255b538098cbe353d42952bda",
-      "deployed_at": "2026-06-21"
+      "deployed_commit": "528a10c6706c1488e2eb6fa8b9a2389ad1f8faa9",
+      "deployed_at": "2026-06-22"
     },
     {
       "oracle": "nova",
