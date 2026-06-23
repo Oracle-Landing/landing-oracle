@@ -8,6 +8,16 @@
 # malformed issues (leaves them open) and only closes on success.
 set -uo pipefail
 cd /opt/Code/github.com/Oracle-Landing/landing-oracle || exit 1
+
+# Single-instance lock — concurrent ticks collide on /tmp/redeploy clone dirs.
+# mkdir is atomic; if another tick holds it, skip this one cleanly.
+LOCK=/tmp/landing-loop-tick.lock
+if ! mkdir "$LOCK" 2>/dev/null; then
+  printf "===== LOOP TICK SUMMARY =====\nskipped: another tick is already running\n"
+  exit 0
+fi
+trap 'rmdir "$LOCK" 2>/dev/null' EXIT
+
 export GITHUB_TOKEN="$(gh auth token 2>/dev/null)"
 export CLOUDFLARE_ACCOUNT_ID="a5eabdc2b11aae9bd5af46bd6a88179e"
 
