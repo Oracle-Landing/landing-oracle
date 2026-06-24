@@ -27,7 +27,7 @@ const issueNum = process.argv[2];
 if (!issueNum) { console.error("usage: deploy-issue.mjs <issueNumber>"); process.exit(2); }
 
 const sh = (cmd, opts = {}) =>
-  execSync(cmd, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], env: { ...process.env, CLOUDFLARE_ACCOUNT_ID: ACCOUNT }, ...opts });
+  execSync(cmd, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], timeout: 240000, killSignal: "SIGKILL", env: { ...process.env, CLOUDFLARE_ACCOUNT_ID: ACCOUNT }, ...opts });
 
 function done(result) { console.log(JSON.stringify(result)); process.exit(result.ok ? 0 : 1); }
 

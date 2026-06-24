@@ -12,6 +12,11 @@ cd /opt/Code/github.com/Oracle-Landing/landing-oracle || exit 1
 # Single-instance lock — concurrent ticks collide on /tmp/redeploy clone dirs.
 # mkdir is atomic; if another tick holds it, skip this one cleanly.
 LOCK=/tmp/landing-loop-tick.lock
+# Stale-lock takeover: a SIGKILLed tick skips its EXIT trap and leaves the lock.
+# If the lock is >15 min old, the holder is dead/hung — reclaim it.
+if [ -d "$LOCK" ] && [ -n "$(find "$LOCK" -prune -mmin +15 2>/dev/null)" ]; then
+  rmdir "$LOCK" 2>/dev/null
+fi
 if ! mkdir "$LOCK" 2>/dev/null; then
   printf "===== LOOP TICK SUMMARY =====\nskipped: another tick is already running\n"
   exit 0

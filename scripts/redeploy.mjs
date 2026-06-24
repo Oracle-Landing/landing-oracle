@@ -27,7 +27,7 @@ const onlyArg = process.argv.indexOf("--only");
 const only = onlyArg !== -1 ? process.argv[onlyArg + 1].split(",") : null;
 
 const sh = (cmd, cwd) =>
-  execSync(cmd, { cwd, stdio: ["ignore", "pipe", "pipe"], encoding: "utf8", env: { ...process.env, CLOUDFLARE_ACCOUNT_ID: ACCOUNT } });
+  execSync(cmd, { cwd, stdio: ["ignore", "pipe", "pipe"], encoding: "utf8", timeout: 240000, killSignal: "SIGKILL", env: { ...process.env, CLOUDFLARE_ACCOUNT_ID: ACCOUNT } });
 
 function pkgManager(dir) {
   if (existsSync(join(dir, "bun.lock")) || existsSync(join(dir, "bun.lockb"))) return "bun";
