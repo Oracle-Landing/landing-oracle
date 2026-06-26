@@ -165,7 +165,7 @@
       "branch": "main",
       "fork": "Oracle-Landing/jizo-landing",
       "worker": "jizo-landing",
-      "deployed_commit": "c888a12731e4fe9586d5d9d5364bfbbcf236a48b",
+      "deployed_commit": "983067eaaa7b626f6f3ca301f5da659e6d27c5a8",
       "deployed_at": "2026-06-26"
     },
     {
