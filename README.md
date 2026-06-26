@@ -58,7 +58,7 @@ _18 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `6c54fb8` | twentyfxurth-k/bongbaeng-savanna@main |
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `fef90b4` | Kubotaaaaa/weizen-landing@main |
-| ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `c888a12` | `c888a12` | yimtheppariyapol/jizo-landing@main |
+| ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `983067e` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
 
