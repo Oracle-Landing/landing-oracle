@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_18 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
+_18 deployments · **2 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -50,7 +50,7 @@ _18 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
-| ✅ | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `f000cb7` | thebuilderofmoebius9/atom-landing@main |
+| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `13ec9d6` | thebuilderofmoebius9/atom-landing@main |
 | ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `6e1dca8` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
@@ -58,9 +58,13 @@ _18 deployments · **0 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `6c54fb8` | twentyfxurth-k/bongbaeng-savanna@main |
 | ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `fef90b4` | Kubotaaaaa/weizen-landing@main |
-| ✅ | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `983067e` | yimtheppariyapol/jizo-landing@main |
+| 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `59f23a5` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
+
+### 🔄 Updates available (redeploy)
+- **atom** — thebuilderofmoebius9/atom-landing@main moved to `13ec9d6`: Promote Orbit landing to Atom home
+- **jizo** — yimtheppariyapol/jizo-landing@main moved to `59f23a5`: feat(home): 3D torii gate hero + style cohere pass
 
 <!-- DEPLOY-STATUS:END -->
 
