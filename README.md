@@ -39,12 +39,12 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_18 deployments · **2 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
+_18 deployments · **3 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
 | ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `528a10c` | `528a10c` | hime-co/chaiklang-landing@main |
-| ✅ | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `fff5e8d` | anupob88/nova-landing@main |
+| 🔄 | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `772f254` | anupob88/nova-landing@main |
 | ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `4d7d5c8` | `4d7d5c8` | MEYD-605/mac1-landing@mainn |
 | ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
@@ -63,6 +63,7 @@ _18 deployments · **2 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
 
 ### 🔄 Updates available (redeploy)
+- **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
 - **atom** — thebuilderofmoebius9/atom-landing@main moved to `13ec9d6`: Promote Orbit landing to Atom home
 - **jizo** — yimtheppariyapol/jizo-landing@main moved to `59f23a5`: feat(home): 3D torii gate hero + style cohere pass
 
