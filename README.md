@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_18 deployments · **3 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
+_18 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -56,8 +56,8 @@ _18 deployments · **3 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
-| ✅ | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `6c54fb8` | twentyfxurth-k/bongbaeng-savanna@main |
-| ✅ | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `fef90b4` | Kubotaaaaa/weizen-landing@main |
+| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `7007fbc` | twentyfxurth-k/bongbaeng-savanna@main |
+| 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `c11f7d5` | Kubotaaaaa/weizen-landing@main |
 | 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `59f23a5` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
@@ -65,6 +65,8 @@ _18 deployments · **3 update(s) available** · 0 error(s) · 0 down · updated 
 ### 🔄 Updates available (redeploy)
 - **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
 - **atom** — thebuilderofmoebius9/atom-landing@main moved to `13ec9d6`: Promote Orbit landing to Atom home
+- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `7007fbc`: feat: env-driven base for GitHub Pages build (CF unaffected)
+- **weizen** — Kubotaaaaa/weizen-landing@main moved to `c11f7d5`: blog: dogfood mirror → FTS5 trigram fixes Thai search recall (34-59% gap → 100%)
 - **jizo** — yimtheppariyapol/jizo-landing@main moved to `59f23a5`: feat(home): 3D torii gate hero + style cohere pass
 
 <!-- DEPLOY-STATUS:END -->
