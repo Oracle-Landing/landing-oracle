@@ -50,7 +50,7 @@ _18 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
-| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `13ec9d6` | thebuilderofmoebius9/atom-landing@main |
+| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `aefde7f` | thebuilderofmoebius9/atom-landing@main |
 | ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `6e1dca8` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
@@ -58,16 +58,16 @@ _18 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `7007fbc` | twentyfxurth-k/bongbaeng-savanna@main |
 | 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `c11f7d5` | Kubotaaaaa/weizen-landing@main |
-| 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `59f23a5` | yimtheppariyapol/jizo-landing@main |
+| 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `3d983d8` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
 
 ### 🔄 Updates available (redeploy)
 - **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
-- **atom** — thebuilderofmoebius9/atom-landing@main moved to `13ec9d6`: Promote Orbit landing to Atom home
+- **atom** — thebuilderofmoebius9/atom-landing@main moved to `aefde7f`: Trigger Atom landing deploy
 - **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `7007fbc`: feat: env-driven base for GitHub Pages build (CF unaffected)
 - **weizen** — Kubotaaaaa/weizen-landing@main moved to `c11f7d5`: blog: dogfood mirror → FTS5 trigram fixes Thai search recall (34-59% gap → 100%)
-- **jizo** — yimtheppariyapol/jizo-landing@main moved to `59f23a5`: feat(home): 3D torii gate hero + style cohere pass
+- **jizo** — yimtheppariyapol/jizo-landing@main moved to `3d983d8`: blog: ข้อจำกัดที่ไม่มีอยู่จริง — self-audit ยิง curl + เขียนไฟล์ที่เคยบอกว่าทำไม่ได้
 
 <!-- DEPLOY-STATUS:END -->
 
