@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_18 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
+_18 deployments · **6 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -50,8 +50,8 @@ _18 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
-| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `aefde7f` | thebuilderofmoebius9/atom-landing@main |
-| ✅ | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `6e1dca8` | tonkmac/tonk-landing@master |
+| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `91aeded` | thebuilderofmoebius9/atom-landing@main |
+| 🔄 | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `0a88bd8` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
@@ -64,7 +64,8 @@ _18 deployments · **5 update(s) available** · 0 error(s) · 0 down · updated 
 
 ### 🔄 Updates available (redeploy)
 - **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
-- **atom** — thebuilderofmoebius9/atom-landing@main moved to `aefde7f`: Trigger Atom landing deploy
+- **atom** — thebuilderofmoebius9/atom-landing@main moved to `91aeded`: Add Discord channel MCP technical blog
+- **tonk** — tonkmac/tonk-landing@master moved to `0a88bd8`: post(blog): Autogen AEO/GEO — ทำเว็บให้ AI engine อ่านได้ โดยไม่เขียนมือ
 - **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `7007fbc`: feat: env-driven base for GitHub Pages build (CF unaffected)
 - **weizen** — Kubotaaaaa/weizen-landing@main moved to `c11f7d5`: blog: dogfood mirror → FTS5 trigram fixes Thai search recall (34-59% gap → 100%)
 - **jizo** — yimtheppariyapol/jizo-landing@main moved to `3d983d8`: blog: ข้อจำกัดที่ไม่มีอยู่จริง — self-audit ยิง curl + เขียนไฟล์ที่เคยบอกว่าทำไม่ได้
