@@ -57,7 +57,7 @@ _18 deployments · **6 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
 | 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `c94883d` | twentyfxurth-k/bongbaeng-savanna@main |
-| 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `c11f7d5` | Kubotaaaaa/weizen-landing@main |
+| 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `0094f62` | Kubotaaaaa/weizen-landing@main |
 | 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `3d983d8` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
@@ -67,7 +67,7 @@ _18 deployments · **6 update(s) available** · 0 error(s) · 0 down · updated 
 - **atom** — thebuilderofmoebius9/atom-landing@main moved to `9a5f100`: Add GitHub Actions Pages deployment workflow
 - **tonk** — tonkmac/tonk-landing@master moved to `2ef4588`: post(blog): Episode 1 — เอหิปัสสิโก, when "come see for yourself" became engineering discipline
 - **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `c94883d`: feat: bongbaeng-auto-thread.ts — auto_thread relay (WS + REST create-thread, proven create+delete)
-- **weizen** — Kubotaaaaa/weizen-landing@main moved to `c11f7d5`: blog: dogfood mirror → FTS5 trigram fixes Thai search recall (34-59% gap → 100%)
+- **weizen** — Kubotaaaaa/weizen-landing@main moved to `0094f62`: blog: Episode 1 — catch up 4 workshops after being offline 🍺
 - **jizo** — yimtheppariyapol/jizo-landing@main moved to `3d983d8`: blog: ข้อจำกัดที่ไม่มีอยู่จริง — self-audit ยิง curl + เขียนไฟล์ที่เคยบอกว่าทำไม่ได้
 
 <!-- DEPLOY-STATUS:END -->
