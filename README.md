@@ -50,25 +50,25 @@ _18 deployments · **6 update(s) available** · 0 error(s) · 0 down · updated 
 | ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
-| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `c8ff9c6` | thebuilderofmoebius9/atom-landing@main |
+| 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `a5a6034` | thebuilderofmoebius9/atom-landing@main |
 | 🔄 | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `2ef4588` | tonkmac/tonk-landing@master |
 | ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
 | ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
-| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `06c5081` | twentyfxurth-k/bongbaeng-savanna@main |
+| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `95a0814` | twentyfxurth-k/bongbaeng-savanna@main |
 | 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `0094f62` | Kubotaaaaa/weizen-landing@main |
-| 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `79d6b77` | yimtheppariyapol/jizo-landing@main |
+| 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `1550ae6` | yimtheppariyapol/jizo-landing@main |
 | ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
 | ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
 
 ### 🔄 Updates available (redeploy)
 - **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
-- **atom** — thebuilderofmoebius9/atom-landing@main moved to `c8ff9c6`: posts: time-travel batch — 8 unwritten lessons from ψ/memory/learnings (Jul 10-31 gap)
+- **atom** — thebuilderofmoebius9/atom-landing@main moved to `a5a6034`: Merge pull request #7 from thebuilderofmoebius9/migrate/atom-oracle-blog-posts
 - **tonk** — tonkmac/tonk-landing@master moved to `2ef4588`: post(blog): Episode 1 — เอหิปัสสิโก, when "come see for yourself" became engineering discipline
-- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `06c5081`: fix: base-aware internal links for GitHub Pages project page
+- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `95a0814`: blog: x402 on-chain proof (HTTP 402 + EIP-3009 + facilitator settle on anvil)
 - **weizen** — Kubotaaaaa/weizen-landing@main moved to `0094f62`: blog: Episode 1 — catch up 4 workshops after being offline 🍺
-- **jizo** — yimtheppariyapol/jizo-landing@main moved to `79d6b77`: book: align taxonomy — ปุ่ม 5 ตัวของด่าน (ch8) + section สามคำ (borrowed) · ผ่าน language review + prism 5 lenses (FLIP: แก้ ok เป็นถังผ่านฉลุย)
+- **jizo** — yimtheppariyapol/jizo-landing@main moved to `1550ae6`: fix: JSON-LD + docs still pointed at jizo.buildwithoracle.com (deprecated, per Yim) — now jizo.productize.life throughout
 
 <!-- DEPLOY-STATUS:END -->
 
