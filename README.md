@@ -39,34 +39,34 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_18 deployments · **6 update(s) available** · 0 error(s) · 0 down · updated 2026-06-26_
+_18 deployments · **6 update(s) available** · 0 error(s) · 17 down · updated 2026-06-26_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
-| ✅ | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `528a10c` | `528a10c` | hime-co/chaiklang-landing@main |
+| 🔴 | chaiklang | [chaiklang.buildwithoracle.com](https://chaiklang.buildwithoracle.com) | `528a10c` | `528a10c` | hime-co/chaiklang-landing@main |
 | 🔄 | nova | [nova.buildwithoracle.com](https://nova.buildwithoracle.com) | `fff5e8d` | `772f254` | anupob88/nova-landing@main |
-| ✅ | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `4d7d5c8` | `4d7d5c8` | MEYD-605/mac1-landing@mainn |
-| ✅ | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
-| ✅ | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
-| ✅ | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
+| 🔴 | mac1 | [mac1.buildwithoracle.com](https://mac1.buildwithoracle.com) | `4d7d5c8` | `4d7d5c8` | MEYD-605/mac1-landing@mainn |
+| 🔴 | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
+| 🔴 | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
+| 🔴 | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
 | ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
 | 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `a5a6034` | thebuilderofmoebius9/atom-landing@main |
-| 🔄 | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `2ef4588` | tonkmac/tonk-landing@master |
-| ✅ | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
-| ✅ | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
-| ✅ | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
-| ✅ | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
-| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `95a0814` | twentyfxurth-k/bongbaeng-savanna@main |
+| 🔄 | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `0858af7` | tonkmac/tonk-landing@master |
+| 🔴 | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
+| 🔴 | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
+| 🔴 | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
+| 🔴 | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
+| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `cc566dd` | twentyfxurth-k/bongbaeng-savanna@main |
 | 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `0094f62` | Kubotaaaaa/weizen-landing@main |
 | 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `3315cc6` | yimtheppariyapol/jizo-landing@main |
-| ✅ | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
-| ✅ | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
+| 🔴 | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
+| 🔴 | vessel | [vessel.buildwithoracle.com](https://vessel.buildwithoracle.com) | `6e760ee` | `6e760ee` | wvweeratouch/vessel-landing@main |
 
 ### 🔄 Updates available (redeploy)
 - **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
 - **atom** — thebuilderofmoebius9/atom-landing@main moved to `a5a6034`: Merge pull request #7 from thebuilderofmoebius9/migrate/atom-oracle-blog-posts
-- **tonk** — tonkmac/tonk-landing@master moved to `2ef4588`: post(blog): Episode 1 — เอหิปัสสิโก, when "come see for yourself" became engineering discipline
-- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `95a0814`: blog: x402 on-chain proof (HTTP 402 + EIP-3009 + facilitator settle on anvil)
+- **tonk** — tonkmac/tonk-landing@master moved to `0858af7`: fix(duang): ayanamsa ให้ตรงตำรา mawduang — nutation+secular (ฐาน 1900) ไม่ใช่ linear
+- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `cc566dd`: blog: maw duang thai astrology engine + prediction discipline lessons
 - **weizen** — Kubotaaaaa/weizen-landing@main moved to `0094f62`: blog: Episode 1 — catch up 4 workshops after being offline 🍺
 - **jizo** — yimtheppariyapol/jizo-landing@main moved to `3315cc6`: ch7: "ยังไม่ได้พิสูจน์" ยิงจริงแล้ว — เขียนผลสี่แบบแทนสถานะเดียว
 
