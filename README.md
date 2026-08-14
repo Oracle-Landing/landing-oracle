@@ -39,7 +39,7 @@ node scripts/check-deploys.mjs --write-readme    # refresh the status table belo
 ## Deploy status
 
 <!-- DEPLOY-STATUS:START -->
-_18 deployments · **6 update(s) available** · 0 error(s) · 17 down · updated 2026-06-26_
+_18 deployments · **6 update(s) available** · 0 error(s) · 18 down · updated 2026-06-26_
 
 | | Oracle | Domain | Deployed | Latest | Source |
 |---|---|---|---|---|---|
@@ -49,7 +49,7 @@ _18 deployments · **6 update(s) available** · 0 error(s) · 17 down · updated
 | 🔴 | gon | [gon.buildwithoracle.com](https://gon.buildwithoracle.com) | `576e88b` | `576e88b` | namhomp/gon-landing@main |
 | 🔴 | sombo | [sombo.buildwithoracle.com](https://sombo.buildwithoracle.com) | `1011a4c` | `1011a4c` | MEYD-605/sombo-landing@main |
 | 🔴 | no10 | [no10.buildwithoracle.com](https://no10.buildwithoracle.com) | `2f38ebe` | `2f38ebe` | MEYD-605/no10-landing@main |
-| ✅ | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
+| 🔴 | dustboy | [dustboy.buildwithoracle.com](https://dustboy.buildwithoracle.com) | `98ea946` | `98ea946` | laris-co/dustboy-land@main |
 | 🔄 | atom | [atom.buildwithoracle.com](https://atom.buildwithoracle.com) | `f000cb7` | `22e37ca` | thebuilderofmoebius9/atom-landing@main |
 | 🔄 | tonk | [tonk.buildwithoracle.com](https://tonk.buildwithoracle.com) | `6e1dca8` | `0858af7` | tonkmac/tonk-landing@master |
 | 🔴 | gemini | [no6.buildwithoracle.com](https://no6.buildwithoracle.com) | `78ecbd1` | `78ecbd1` | MEYD-605/gemini-landing@main |
