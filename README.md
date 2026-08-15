@@ -56,7 +56,7 @@ _18 deployments · **6 update(s) available** · 0 error(s) · 18 down · updated
 | 🔴 | mali | [mali.buildwithoracle.com](https://mali.buildwithoracle.com) | `833b3af` | `833b3af` | phaith/mali-landing@main |
 | 🔴 | vialumen | [vialumen.buildwithoracle.com](https://vialumen.buildwithoracle.com) | `3cfe103` | `3cfe103` | tamtidmear-prog/vialumen-landing@master |
 | 🔴 | agy | [no8.buildwithoracle.com](https://no8.buildwithoracle.com) | `ac449b0` | `ac449b0` | MEYD-605/agy-landing@main |
-| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `cc566dd` | twentyfxurth-k/bongbaeng-savanna@main |
+| 🔄 | bongbaeng | [bongbaeng.buildwithoracle.com](https://bongbaeng.buildwithoracle.com) | `6c54fb8` | `805bd66` | twentyfxurth-k/bongbaeng-savanna@main |
 | 🔄 | weizen | [weizen.buildwithoracle.com](https://weizen.buildwithoracle.com) | `fef90b4` | `0094f62` | Kubotaaaaa/weizen-landing@main |
 | 🔄 | jizo | [jizo.buildwithoracle.com](https://jizo.buildwithoracle.com) | `983067e` | `3315cc6` | yimtheppariyapol/jizo-landing@main |
 | 🔴 | tokyo | [tokyo.buildwithoracle.com](https://tokyo.buildwithoracle.com) | `c0c2cf4` | `c0c2cf4` | gon2018/tokyo-landing@main |
@@ -66,7 +66,7 @@ _18 deployments · **6 update(s) available** · 0 error(s) · 18 down · updated
 - **nova** — anupob88/nova-landing@main moved to `772f254`: feat: Nova Proof of Hours — gap-based, content-free, Discord-aware
 - **atom** — thebuilderofmoebius9/atom-landing@main moved to `22e37ca`: books+blog: LINE db recovery and invisible-hand iPhone check (#9)
 - **tonk** — tonkmac/tonk-landing@master moved to `0858af7`: fix(duang): ayanamsa ให้ตรงตำรา mawduang — nutation+secular (ฐาน 1900) ไม่ใช่ linear
-- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `cc566dd`: blog: maw duang thai astrology engine + prediction discipline lessons
+- **bongbaeng** — twentyfxurth-k/bongbaeng-savanna@main moved to `805bd66`: blog: MCP stateless v1/v2 vs REST — pros/cons + runnable proofs (uniform-envelope)
 - **weizen** — Kubotaaaaa/weizen-landing@main moved to `0094f62`: blog: Episode 1 — catch up 4 workshops after being offline 🍺
 - **jizo** — yimtheppariyapol/jizo-landing@main moved to `3315cc6`: ch7: "ยังไม่ได้พิสูจน์" ยิงจริงแล้ว — เขียนผลสี่แบบแทนสถานะเดียว
 
